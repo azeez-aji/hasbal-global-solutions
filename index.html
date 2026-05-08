@@ -811,7 +811,130 @@
     <!-- Projects Grid -->
     <div class="grid lg:grid-cols-2 gap-8">
 
-      <!-- Project 1: Supermarket Revenue Forecasting -->
+      <!-- Project 1: BPSS Power BI Dashboard -->
+      <div class="glass-card p-8 fade-up group lg:col-span-2" style="transition-delay:0.32s;border-color:rgba(45,212,191,0.2)">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0" style="background:linear-gradient(135deg,rgba(45,212,191,0.2),rgba(13,148,136,0.1));border:1px solid rgba(45,212,191,0.25)">📋</div>
+          <div class="flex-1">
+            <div class="flex flex-wrap gap-2 mb-2">
+              <span class="project-tag">Power BI</span>
+              <span class="project-tag">DAX</span>
+              <span class="project-tag">Power Automate</span>
+              <span class="project-tag">OneDrive</span>
+              <span class="project-tag">Excel</span>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-white">BPSS Project Management Dashboard</h3>
+            <p class="text-slate-400 text-sm mt-1">Confidential Client · India</p>
+          </div>
+        </div>
+
+        <!-- Dashboard Preview Screenshots -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6 rounded-xl overflow-hidden">
+          <div class="rounded-lg overflow-hidden" style="border:1px solid rgba(45,212,191,0.15)">
+            <div class="bg-slate-800 px-2 py-1 text-xs text-slate-400 font-mono">Executive Overview</div>
+            <div class="h-20 flex items-center justify-center text-slate-600 text-xs" style="background:rgba(15,25,41,0.8)">
+              <div class="text-center">
+                <div class="text-2xl font-bold text-white font-mono">100</div>
+                <div class="text-teal-400 text-xs">Total Projects</div>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-lg overflow-hidden" style="border:1px solid rgba(45,212,191,0.15)">
+            <div class="bg-slate-800 px-2 py-1 text-xs text-slate-400 font-mono">PM Tracker</div>
+            <div class="h-20 flex items-center justify-center" style="background:rgba(15,25,41,0.8)">
+              <div class="text-center">
+                <div class="text-2xl font-bold text-white font-mono">6</div>
+                <div class="text-teal-400 text-xs">Project Managers</div>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-lg overflow-hidden" style="border:1px solid rgba(45,212,191,0.15)">
+            <div class="bg-slate-800 px-2 py-1 text-xs text-slate-400 font-mono">Quality Deep Dive</div>
+            <div class="h-20 flex items-center justify-center" style="background:rgba(15,25,41,0.8)">
+              <div class="text-center">
+                <div class="text-2xl font-bold text-white font-mono">3.43</div>
+                <div class="text-teal-400 text-xs">Avg Rating</div>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-lg overflow-hidden" style="border:1px solid rgba(45,212,191,0.15)">
+            <div class="bg-slate-800 px-2 py-1 text-xs text-slate-400 font-mono">Trends</div>
+            <div class="h-20 flex items-center justify-center" style="background:rgba(15,25,41,0.8)">
+              <div class="text-center">
+                <div class="text-2xl font-bold text-white font-mono">59.38<span class="text-lg">%</span></div>
+                <div class="text-teal-400 text-xs">Overall Score</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          Designed and delivered a fully automated, multi-page Power BI report for a confidential client in India — tracking 100 projects across 5 global regions (AMER, APAC, EMEA, LATAM, NORAM) and 6 Project Managers. The entire data pipeline was automated: an Excel workbook on OneDrive is continuously refreshed by a <strong class="text-white">Power Automate flow</strong> I configured, feeding live data directly into Power BI with zero manual intervention.
+        </p>
+
+        <!-- 4-Page Feature Grid -->
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div class="rounded-xl p-4" style="background:rgba(45,212,191,0.05);border:1px solid rgba(45,212,191,0.12)">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-teal-400 text-lg">📊</span>
+              <span class="text-white font-semibold text-sm">Executive Overview</span>
+            </div>
+            <p class="text-slate-400 text-xs leading-relaxed">Top-level KPIs (Total Projects, Completion Rate, Overall Score), project count by region (donut chart), monthly trend bar chart, and status breakdown — all filterable by date range, PM, and region.</p>
+          </div>
+          <div class="rounded-xl p-4" style="background:rgba(45,212,191,0.05);border:1px solid rgba(45,212,191,0.12)">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-teal-400 text-lg">🎯</span>
+              <span class="text-white font-semibold text-sm">Project &amp; PM Tracker</span>
+            </div>
+            <p class="text-slate-400 text-xs leading-relaxed">Granular project-level table with Region, Month, Status, Avg Rating &amp; Turnaround Days. Bar chart breakdown by PM showing workload distribution across all 6 managers.</p>
+          </div>
+          <div class="rounded-xl p-4" style="background:rgba(45,212,191,0.05);border:1px solid rgba(45,212,191,0.12)">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-teal-400 text-lg">🔬</span>
+              <span class="text-white font-semibold text-sm">Quality Deep Dive</span>
+            </div>
+            <p class="text-slate-400 text-xs leading-relaxed">Heatmap-style rating matrix scoring 10 criteria per project (Communication, Domain Knowledge, Framework, Infrastructure, etc.). Avg ratings by PM and by Region with conditional colour coding.</p>
+          </div>
+          <div class="rounded-xl p-4" style="background:rgba(45,212,191,0.05);border:1px solid rgba(45,212,191,0.12)">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-teal-400 text-lg">📈</span>
+              <span class="text-white font-semibold text-sm">Project Trends</span>
+            </div>
+            <p class="text-slate-400 text-xs leading-relaxed">Turnaround Days trend line by project, Overall Experience by BPSS Month stacked bar, and a scatter plot of Turnaround Days vs Avg Rating segmented by all 5 regions.</p>
+          </div>
+        </div>
+
+        <!-- Key Highlights -->
+        <div class="space-y-3 mb-6">
+          <div class="flex items-start gap-3 text-sm">
+            <span class="text-teal-400 mt-0.5 flex-shrink-0">▸</span>
+            <span class="text-slate-300">Configured end-to-end <strong class="text-white">Power Automate pipeline</strong> — Excel on OneDrive auto-populated, Power BI refreshed automatically, zero manual data entry</span>
+          </div>
+          <div class="flex items-start gap-3 text-sm">
+            <span class="text-teal-400 mt-0.5 flex-shrink-0">▸</span>
+            <span class="text-slate-300">Built advanced <strong class="text-white">DAX measures</strong> for YTD scoring, rating bands, completion rates, and turnaround KPIs across 4 report pages</span>
+          </div>
+          <div class="flex items-start gap-3 text-sm">
+            <span class="text-teal-400 mt-0.5 flex-shrink-0">▸</span>
+            <span class="text-slate-300">Integrated <strong class="text-white">Power BI Q&amp;A natural language visual</strong> enabling stakeholders to query their own data in plain English</span>
+          </div>
+          <div class="flex items-start gap-3 text-sm">
+            <span class="text-teal-400 mt-0.5 flex-shrink-0">▸</span>
+            <span class="text-slate-300">Cross-report <strong class="text-white">slicers synced</strong> across all 4 pages — filter by date range, status, PM name, and region simultaneously</span>
+          </div>
+        </div>
+
+        <!-- Result Badges -->
+        <div class="flex flex-wrap gap-3">
+          <span class="result-badge">📋 100 Projects Tracked</span>
+          <span class="result-badge">🌍 5 Global Regions</span>
+          <span class="result-badge">⚡ Fully Automated Pipeline</span>
+          <span class="result-badge">📐 4-Page Report</span>
+          <span class="result-badge">🗣️ NL Q&amp;A Visual</span>
+        </div>
+      </div>
+
+      <!-- Project 2: Supermarket Revenue Forecasting -->
       <div class="glass-card p-8 fade-up group">
         <div class="flex items-start gap-4 mb-6">
           <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0" style="background:linear-gradient(135deg,rgba(45,212,191,0.2),rgba(13,148,136,0.1));border:1px solid rgba(45,212,191,0.2)">🛒</div>
@@ -854,7 +977,7 @@
         </div>
       </div>
 
-      <!-- Project 2: Hospital Procurement Dashboard -->
+      <!-- Project 3: Hospital Procurement Dashboard -->
       <div class="glass-card p-8 fade-up group" style="transition-delay:0.08s">
         <div class="flex items-start gap-4 mb-6">
           <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0" style="background:linear-gradient(135deg,rgba(240,180,41,0.2),rgba(251,191,36,0.1));border:1px solid rgba(240,180,41,0.2)">🏥</div>
@@ -894,7 +1017,7 @@
         </div>
       </div>
 
-      <!-- Project 3: COVID-19 Radiography Detection -->
+      <!-- Project 4: COVID-19 Radiography Detection -->
       <div class="glass-card p-8 fade-up group" style="transition-delay:0.16s">
         <div class="flex items-start gap-4 mb-6">
           <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0" style="background:linear-gradient(135deg,rgba(239,68,68,0.2),rgba(220,38,38,0.1));border:1px solid rgba(239,68,68,0.2)">🫁</div>
@@ -934,7 +1057,7 @@
         </div>
       </div>
 
-      <!-- Project 4: Venice Boat Classification -->
+      <!-- Project 5: Venice Boat Classification -->
       <div class="glass-card p-8 fade-up group" style="transition-delay:0.24s">
         <div class="flex items-start gap-4 mb-6">
           <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0" style="background:linear-gradient(135deg,rgba(99,102,241,0.2),rgba(79,70,229,0.1));border:1px solid rgba(99,102,241,0.2)">⛵</div>
@@ -1087,7 +1210,7 @@
           <div class="text-teal-400 text-3xl mb-3">"</div>
           <p class="text-slate-300 italic text-base leading-relaxed">My mission is to make data skills accessible to everyone — turning confusion into confidence, and spreadsheets into strategic assets.</p>
           <div class="mt-4 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center text-lg" style="background:linear-gradient(135deg,#2DD4BF,#0D9488)"><img src= "C:\Users\Owner\Downloads\profilePic.png" alt="my profike pic"></div>
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-lg" style="background:linear-gradient(135deg,#2DD4BF,#0D9488)"><img src= "./photo.jpg" alt="my profike pic"></div>
             <div>
               <div class="text-white font-semibold text-sm">Azeez Ajibola Azeez</div>
               <div class="text-slate-400 text-xs">Founder &amp; Lead Analyst</div>
