@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hasbal Global Solutions | Data Analytics Tutoring & Consulting</title>
-  
-  <!-- SEO Meta Tags -->
   <meta name="description" content="Premium 1-on-1 Data Analytics tutoring and consulting in Microsoft Excel, Power BI, Google Sheets, SQL, and Data Analysis. Serving professionals, students, and businesses in Nigeria, UK, and internationally." />
   <meta name="keywords" content="Data Analytics Tutoring, Excel Consultant Nigeria, Power BI Training, SQL Tutoring, Google Sheets, Data Analysis, Hasbal Global Solutions" />
   <meta name="author" content="Hasbal Global Solutions" />
@@ -14,387 +12,283 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind Config -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            teal: {
-              400: '#2DD4BF',
-              500: '#14B8A6',
-              600: '#0D9488',
-            },
-            navy: {
-              800: '#0F1929',
-              900: '#080F1A',
-              950: '#050C14',
-            },
-            slate: {
-              glass: 'rgba(15,25,41,0.7)',
-            }
-          },
-          fontFamily: {
-            display: ['"Cormorant Garamond"', 'serif'],
-            body: ['"DM Sans"', 'sans-serif'],
-            mono: ['"Space Mono"', 'monospace'],
-          },
-        }
-      }
-    }
-  </script>
-
   <style>
-    /* ── Base ── */
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       font-family: 'DM Sans', sans-serif;
-      background-color: #080F1A;
+      background-color: #04091A;
       color: #E2E8F0;
       overflow-x: hidden;
     }
 
-    /* ── CSS Variables ── */
+    /* ── Brand Palette ── */
     :root {
-      --teal: #2DD4BF;
-      --teal-dark: #0D9488;
-      --gold: #F0B429;
-      --navy: #080F1A;
-      --navy-mid: #0F1929;
-      --navy-light: #162035;
-      --text: #E2E8F0;
-      --text-muted: #94A3B8;
-      --glass-bg: rgba(22, 32, 53, 0.65);
-      --glass-border: rgba(45, 212, 191, 0.15);
+      --blue:        #3B82F6;
+      --blue-deep:   #2563EB;
+      --blue-pale:   #60A5FA;
+      --green:       #10B981;
+      --green-deep:  #059669;
+      --green-pale:  #34D399;
+      --gold:        #F0B429;
+      --bg:          #04091A;
+      --surface:     #071020;
+      --glass-bg:    rgba(7,16,32,0.82);
+      --glass-border:rgba(59,130,246,0.16);
     }
 
-    /* ── Animated Hero Gradient ── */
-    .hero-gradient {
-      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(45,212,191,0.18) 0%, transparent 60%),
-                  radial-gradient(ellipse 60% 40% at 85% 50%, rgba(13,148,136,0.12) 0%, transparent 50%),
-                  radial-gradient(ellipse 40% 60% at 10% 70%, rgba(15,25,41,0.8) 0%, transparent 70%),
-                  #080F1A;
-      animation: heroShift 8s ease-in-out infinite alternate;
-    }
-    @keyframes heroShift {
-      0%  { background-position: 50% -10%, 85% 50%, 10% 70%; }
-      100%{ background-position: 50%  10%, 80% 45%, 15% 65%; }
-    }
-
-    /* ── Mesh Grid Background ── */
+    /* ── Mesh Grid ── */
     .mesh-bg {
       background-image:
-        linear-gradient(rgba(45,212,191,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(45,212,191,0.04) 1px, transparent 1px);
+        linear-gradient(rgba(59,130,246,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,130,246,0.045) 1px, transparent 1px);
       background-size: 60px 60px;
     }
 
-    /* ── Glassmorphism Card ── */
+    /* ── Hero ── */
+    .hero-gradient {
+      background:
+        radial-gradient(ellipse 65% 55% at 15% 20%, rgba(37,99,235,0.24) 0%, transparent 60%),
+        radial-gradient(ellipse 55% 45% at 88% 65%, rgba(5,150,105,0.18) 0%, transparent 55%),
+        radial-gradient(ellipse 80% 60% at 50% 110%, rgba(4,9,26,0.95) 0%, transparent 70%),
+        #04091A;
+    }
+
+    /* ── Glass Card ── */
     .glass-card {
       background: var(--glass-bg);
       border: 1px solid var(--glass-border);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       border-radius: 16px;
       transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
     .glass-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(45,212,191,0.4);
-      box-shadow: 0 20px 60px rgba(45,212,191,0.08);
+      border-color: rgba(59,130,246,0.38);
+      box-shadow: 0 20px 60px rgba(37,99,235,0.13);
     }
 
-    /* ── Gradient Text ── */
+    /* ── Gradient Text: Blue → Green ── */
     .gradient-text {
-      background: linear-gradient(135deg, #2DD4BF 0%, #14B8A6 50%, #6EE7B7 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .gold-text {
-      background: linear-gradient(135deg, #F0B429 0%, #FBBF24 100%);
+      background: linear-gradient(135deg, #60A5FA 0%, #34D399 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
-    /* ── Teal Button ── */
+    /* ── Buttons ── */
     .btn-primary {
-      background: linear-gradient(135deg, #2DD4BF, #0D9488);
-      color: #080F1A;
+      background: linear-gradient(135deg, #2563EB, #059669);
+      color: #ffffff;
       font-weight: 700;
       letter-spacing: 0.02em;
       border-radius: 8px;
       transition: all 0.25s ease;
-      box-shadow: 0 4px 24px rgba(45,212,191,0.25);
-      position: relative;
-      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(37,99,235,0.32);
+      position: relative; overflow: hidden;
     }
     .btn-primary::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(255,255,255,0.08);
-      opacity: 0;
-      transition: opacity 0.2s;
+      content:''; position:absolute; inset:0;
+      background:rgba(255,255,255,0.07); opacity:0; transition:opacity 0.2s;
     }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(45,212,191,0.35); }
-    .btn-primary:hover::after { opacity: 1; }
+    .btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 32px rgba(37,99,235,0.46); }
+    .btn-primary:hover::after { opacity:1; }
 
     .btn-outline {
-      border: 1.5px solid rgba(45,212,191,0.5);
-      color: #2DD4BF;
-      border-radius: 8px;
-      font-weight: 600;
+      border: 1.5px solid rgba(59,130,246,0.45);
+      color: #60A5FA;
+      border-radius: 8px; font-weight: 600;
       transition: all 0.25s ease;
     }
     .btn-outline:hover {
-      background: rgba(45,212,191,0.08);
-      border-color: #2DD4BF;
-      box-shadow: 0 0 20px rgba(45,212,191,0.15);
+      background: rgba(59,130,246,0.09);
+      border-color: #3B82F6;
+      box-shadow: 0 0 20px rgba(59,130,246,0.16);
     }
 
-    /* ── Section Title Bar ── */
+    /* ── Section Label ── */
     .section-label {
       font-family: 'Space Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #2DD4BF;
+      font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #60A5FA;
     }
 
-    /* ── Nav ── */
-    #navbar {
-      transition: background 0.4s ease, box-shadow 0.4s ease;
-    }
+    /* ── Navbar ── */
+    #navbar { transition: background 0.4s ease, box-shadow 0.4s ease; }
     #navbar.scrolled {
-      background: rgba(8,15,26,0.95);
+      background: rgba(4,9,26,0.97);
       backdrop-filter: blur(20px);
-      box-shadow: 0 1px 0 rgba(45,212,191,0.1);
+      box-shadow: 0 1px 0 rgba(59,130,246,0.13);
     }
     .nav-link {
-      color: #94A3B8;
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: color 0.2s;
-      position: relative;
+      color:#94A3B8; font-size:0.875rem; font-weight:500;
+      transition:color 0.2s; position:relative;
     }
     .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -2px; left: 0;
-      width: 0; height: 1px;
-      background: #2DD4BF;
-      transition: width 0.3s ease;
+      content:''; position:absolute; bottom:-2px; left:0;
+      width:0; height:1px;
+      background:linear-gradient(90deg,#3B82F6,#10B981);
+      transition:width 0.3s ease;
     }
-    .nav-link:hover { color: #2DD4BF; }
-    .nav-link:hover::after { width: 100%; }
+    .nav-link:hover { color:#60A5FA; }
+    .nav-link:hover::after { width:100%; }
 
-    /* ── Number Ticker ── */
-    .stat-number { font-family: 'Space Mono', monospace; }
-
-    /* ── Service Icon Ring ── */
+    /* ── Service Icon ── */
     .service-icon {
-      width: 52px; height: 52px;
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      background: rgba(45,212,191,0.1);
-      border: 1px solid rgba(45,212,191,0.2);
-      font-size: 1.4rem;
-      transition: transform 0.3s, background 0.3s;
+      width:52px; height:52px; border-radius:14px;
+      display:flex; align-items:center; justify-content:center;
+      background:rgba(59,130,246,0.1);
+      border:1px solid rgba(59,130,246,0.2);
+      font-size:1.4rem;
+      transition:transform 0.3s, background 0.3s;
     }
     .glass-card:hover .service-icon {
-      transform: scale(1.1) rotate(-3deg);
-      background: rgba(45,212,191,0.18);
+      transform:scale(1.1) rotate(-3deg);
+      background:rgba(59,130,246,0.2);
     }
 
-    /* ── Course Card Ribbon ── */
+    /* ── Ribbon ── */
     .ribbon {
-      position: absolute;
-      top: 16px; right: -6px;
-      background: linear-gradient(135deg, #F0B429, #FBBF24);
-      color: #080F1A;
-      font-size: 0.65rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      padding: 3px 12px;
-      border-radius: 3px 0 0 3px;
-      box-shadow: -2px 2px 6px rgba(0,0,0,0.3);
+      position:absolute; top:16px; right:-6px;
+      background:linear-gradient(135deg,#F0B429,#FBBF24);
+      color:#04091A; font-size:0.65rem; font-weight:800;
+      letter-spacing:0.1em; padding:3px 12px;
+      border-radius:3px 0 0 3px;
+      box-shadow:-2px 2px 6px rgba(0,0,0,0.3);
     }
     .ribbon::after {
-      content: '';
-      position: absolute;
-      bottom: -6px; right: 0;
-      border-width: 6px 6px 0 0;
-      border-style: solid;
-      border-color: #B45309 transparent transparent transparent;
+      content:''; position:absolute; bottom:-6px; right:0;
+      border-width:6px 6px 0 0; border-style:solid;
+      border-color:#B45309 transparent transparent transparent;
     }
 
     /* ── Project Tag ── */
     .project-tag {
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      padding: 3px 10px;
-      border-radius: 100px;
-      background: rgba(45,212,191,0.1);
-      border: 1px solid rgba(45,212,191,0.2);
-      color: #2DD4BF;
+      font-size:0.65rem; font-weight:600; letter-spacing:0.08em;
+      padding:3px 10px; border-radius:100px;
+      background:rgba(59,130,246,0.1);
+      border:1px solid rgba(59,130,246,0.22);
+      color:#60A5FA;
     }
 
     /* ── Result Badge ── */
     .result-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(45,212,191,0.08);
-      border: 1px solid rgba(45,212,191,0.2);
-      border-radius: 100px;
-      padding: 6px 14px;
-      font-size: 0.8rem;
-      color: #2DD4BF;
-      font-weight: 600;
+      display:inline-flex; align-items:center; gap:6px;
+      background:rgba(16,185,129,0.08);
+      border:1px solid rgba(16,185,129,0.22);
+      border-radius:100px; padding:6px 14px;
+      font-size:0.8rem; color:#34D399; font-weight:600;
     }
 
-    /* ── Testimonial Star ── */
-    .star { color: #F0B429; }
+    /* ── Stars ── */
+    .star { color:#F0B429; }
 
-    /* ── Floating WhatsApp ── */
+    /* ── WhatsApp ── */
     #whatsapp-btn {
-      position: fixed;
-      bottom: 28px; right: 28px;
-      width: 56px; height: 56px;
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 24px rgba(37,211,102,0.4);
-      z-index: 9999;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: pulse-green 2.5s ease-in-out infinite;
+      position:fixed; bottom:28px; right:28px;
+      width:56px; height:56px;
+      background:linear-gradient(135deg,#25D366,#128C7E);
+      border-radius:50%; display:flex; align-items:center; justify-content:center;
+      box-shadow:0 4px 24px rgba(37,211,102,0.4);
+      z-index:9999; transition:transform 0.3s, box-shadow 0.3s;
+      animation:pulse-wa 2.5s ease-in-out infinite;
     }
-    #whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
-    @keyframes pulse-green {
-      0%, 100% { box-shadow: 0 4px 24px rgba(37,211,102,0.4); }
-      50%       { box-shadow: 0 4px 40px rgba(37,211,102,0.7); }
+    #whatsapp-btn:hover { transform:scale(1.1); box-shadow:0 8px 32px rgba(37,211,102,0.55); }
+    @keyframes pulse-wa {
+      0%,100% { box-shadow:0 4px 24px rgba(37,211,102,0.4); }
+      50%      { box-shadow:0 4px 42px rgba(37,211,102,0.7); }
     }
 
     /* ── Mobile Menu ── */
-    #mobile-menu { transition: max-height 0.35s ease, opacity 0.35s ease; max-height: 0; opacity: 0; overflow: hidden; }
-    #mobile-menu.open { max-height: 400px; opacity: 1; }
+    #mobile-menu { transition:max-height 0.35s ease, opacity 0.35s ease; max-height:0; opacity:0; overflow:hidden; }
+    #mobile-menu.open { max-height:420px; opacity:1; }
 
-    /* ── Scroll Fade-In ── */
-    .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-
-    /* ── Timeline Connector ── */
-    .timeline-dot::before {
-      content: '';
-      position: absolute;
-      top: 50%; left: -25px;
-      transform: translateY(-50%);
-      width: 10px; height: 10px;
-      border-radius: 50%;
-      background: #2DD4BF;
-      box-shadow: 0 0 0 3px rgba(45,212,191,0.2);
-    }
+    /* ── Fade Up ── */
+    .fade-up { opacity:0; transform:translateY(30px); transition:opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity:1; transform:translateY(0); }
 
     /* ── Divider ── */
-    .teal-divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(45,212,191,0.3), transparent);
+    .brand-divider {
+      height:1px;
+      background:linear-gradient(90deg,transparent,rgba(59,130,246,0.25),rgba(16,185,129,0.22),transparent);
     }
 
-    /* ── Progress Bar ── */
+    /* ── Skill Bars ── */
     .skill-bar-fill {
-      background: linear-gradient(90deg, #2DD4BF, #14B8A6);
-      height: 4px;
-      border-radius: 2px;
-      transition: width 1.2s ease;
+      background:linear-gradient(90deg,#2563EB,#10B981);
+      height:4px; border-radius:2px;
     }
 
-    /* ── Hero typing cursor ── */
+    /* ── Cursor ── */
     .cursor-blink {
-      display: inline-block;
-      width: 3px; height: 1em;
-      background: #2DD4BF;
-      animation: blink 1s step-end infinite;
-      vertical-align: text-bottom;
-      margin-left: 2px;
+      display:inline-block; width:3px; height:1em;
+      background:linear-gradient(180deg,#3B82F6,#10B981);
+      animation:blink 1s step-end infinite;
+      vertical-align:text-bottom; margin-left:2px;
     }
-    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
     /* ── Scrollbar ── */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #080F1A; }
-    ::-webkit-scrollbar-thumb { background: #1E3A4A; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: #2DD4BF; }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#04091A; }
+    ::-webkit-scrollbar-thumb { background:#1E3A5F; border-radius:3px; }
+    ::-webkit-scrollbar-thumb:hover { background:#3B82F6; }
+
+    /* ── CTA Banner ── */
+    .cta-banner {
+      background:linear-gradient(135deg,rgba(37,99,235,0.12),rgba(5,150,105,0.09));
+      border:1px solid rgba(59,130,246,0.2);
+    }
+
+    /* ── Stat Numbers ── */
+    .stat-number { font-family:'Space Mono',monospace; }
   </style>
 </head>
 <body class="mesh-bg">
 
-<!-- ═══════════════════════════════════════
-     FLOATING WHATSAPP BUTTON
-═══════════════════════════════════════ -->
+<!-- ═══════ FLOATING WHATSAPP ═══════ -->
 <a id="whatsapp-btn" href="https://wa.me/2349011621931" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
     <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.12.55 4.18 1.6 6L0 24l6.18-1.58A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.66-.5-5.23-1.44l-.37-.22-3.87.99 1.02-3.77-.24-.38A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.93 9.93 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.46-7.43c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.63-.93-2.23-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.09 3.19 5.06 4.47.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
   </svg>
 </a>
 
-<!-- ═══════════════════════════════════════
-     NAVIGATION
-═══════════════════════════════════════ -->
+
+<!-- ═══════ NAVBAR ═══════ -->
 <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 px-6 py-4">
   <div class="max-w-7xl mx-auto flex items-center justify-between">
-    <!-- Logo -->
     <a href="#hero" class="flex items-center gap-3">
-      <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#2DD4BF,#0D9488)">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#080F1A" stroke-width="2.5">
-          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-        </svg>
+      <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#2563EB,#059669)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
       </div>
       <div>
-        <span class="text-white font-display font-semibold text-lg leading-none">Hasbal</span>
-        <span class="gradient-text font-display font-semibold text-lg leading-none"> Global</span>
+        <span class="text-white font-serif font-semibold text-lg leading-none" style="font-family:'Cormorant Garamond',serif">Hasbal</span>
+        <span class="gradient-text font-semibold text-lg leading-none" style="font-family:'Cormorant Garamond',serif"> Global</span>
       </div>
     </a>
-
-    <!-- Desktop Links -->
     <div class="hidden md:flex items-center gap-7">
-      <a href="#services" class="nav-link">Services</a>
-      <a href="#courses"  class="nav-link">Courses</a>
-      <a href="#portfolio" class="nav-link">Portfolio</a>
-      <a href="#about"   class="nav-link">About</a>
+      <a href="#services"     class="nav-link">Services</a>
+      <a href="#courses"      class="nav-link">Courses</a>
+      <a href="#portfolio"    class="nav-link">Portfolio</a>
+      <a href="#about"        class="nav-link">About</a>
       <a href="#testimonials" class="nav-link">Reviews</a>
-      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#contact"      class="nav-link">Contact</a>
     </div>
-
-    <!-- CTA -->
-    <div class="hidden md:flex items-center gap-3">
-      <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener"
-         class="btn-primary px-5 py-2.5 text-sm font-body">
-        📅 Book a Session
-      </a>
+    <div class="hidden md:flex">
+      <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener" class="btn-primary px-5 py-2.5 text-sm">📅 Book a Session</a>
     </div>
-
-    <!-- Hamburger -->
-    <button id="hamburger" class="md:hidden text-slate-400 hover:text-teal-400 focus:outline-none" aria-label="Toggle menu">
-      <svg id="ham-open" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <button id="hamburger" class="md:hidden text-slate-400 hover:text-blue-400 focus:outline-none" aria-label="Toggle menu">
+      <svg id="ham-open"  width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       <svg id="ham-close" class="hidden" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
     </button>
   </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden" style="background:rgba(8,15,26,0.97);border-top:1px solid rgba(45,212,191,0.1);margin-top:12px;border-radius:12px">
+  <div id="mobile-menu" class="md:hidden" style="background:rgba(4,9,26,0.98);border-top:1px solid rgba(59,130,246,0.12);margin-top:12px;border-radius:12px">
     <div class="flex flex-col gap-1 px-4 py-4">
       <a href="#services"     class="nav-link py-2 text-base" onclick="closeMenu()">Services</a>
       <a href="#courses"      class="nav-link py-2 text-base" onclick="closeMenu()">Courses</a>
@@ -402,148 +296,99 @@
       <a href="#about"        class="nav-link py-2 text-base" onclick="closeMenu()">About</a>
       <a href="#testimonials" class="nav-link py-2 text-base" onclick="closeMenu()">Reviews</a>
       <a href="#contact"      class="nav-link py-2 text-base" onclick="closeMenu()">Contact</a>
-      <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank"
-         class="btn-primary px-5 py-3 text-center text-sm mt-2" onclick="closeMenu()">📅 Book a Free Session</a>
+      <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" class="btn-primary px-5 py-3 text-center text-sm mt-2" onclick="closeMenu()">📅 Book a Free Session</a>
     </div>
   </div>
 </nav>
 
 
-<!-- ═══════════════════════════════════════
-     HERO SECTION
-═══════════════════════════════════════ -->
+<!-- ═══════ HERO ═══════ -->
 <section id="hero" class="hero-gradient relative min-h-screen flex items-center pt-20 overflow-hidden">
-
-  <!-- Decorative Orbs -->
-  <div class="absolute top-20 right-10 w-80 h-80 rounded-full opacity-10" style="background:radial-gradient(circle,#2DD4BF,transparent);filter:blur(60px);pointer-events:none"></div>
-  <div class="absolute bottom-20 left-5 w-60 h-60 rounded-full opacity-8" style="background:radial-gradient(circle,#0D9488,transparent);filter:blur(80px);pointer-events:none"></div>
+  <div class="absolute top-16 left-10 w-96 h-96 rounded-full opacity-100 pointer-events-none" style="background:radial-gradient(circle,rgba(37,99,235,0.32),transparent);filter:blur(70px)"></div>
+  <div class="absolute bottom-10 right-10 w-80 h-80 rounded-full opacity-100 pointer-events-none" style="background:radial-gradient(circle,rgba(5,150,105,0.24),transparent);filter:blur(80px)"></div>
 
   <div class="max-w-7xl mx-auto px-6 py-20 lg:py-28 w-full">
     <div class="grid lg:grid-cols-2 gap-16 items-center">
 
-      <!-- Left Copy -->
+      <!-- Left -->
       <div>
-        <div class="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full" style="background:rgba(45,212,191,0.08);border:1px solid rgba(45,212,191,0.2)">
-          <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+        <div class="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full" style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.22)">
+          <span class="w-2 h-2 rounded-full animate-pulse" style="background:#10B981"></span>
           <span class="section-label" style="font-size:0.7rem">Available for 1-on-1 Sessions · Nigeria · UK · Global</span>
         </div>
-
-        <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-6">
-          Turn Your <br/>
-          <span class="gradient-text">Raw Data</span><br/>
+        <h1 style="font-family:'Cormorant Garamond',serif" class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-6">
+          Turn Your <br/><span class="gradient-text">Raw Data</span><br/>
           Into <span id="typed-word" class="gradient-text">Decisions</span><span class="cursor-blink"></span>
         </h1>
-
         <p class="text-slate-300 text-lg md:text-xl leading-relaxed mb-8 max-w-lg font-light">
           Premium 1-on-1 tutoring &amp; consulting in <strong class="text-white font-semibold">Excel, Power BI, Google Sheets, SQL,</strong> and Data Analysis — for professionals, students, and businesses ready to compete with data.
         </p>
-
-        <!-- CTA Row -->
         <div class="flex flex-wrap gap-4 mb-12">
-          <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener"
-             class="btn-primary px-7 py-4 text-base flex items-center gap-2">
-            📅 Book a Free Discovery Call
-          </a>
-          <a href="#courses" class="btn-outline px-7 py-4 text-base flex items-center gap-2">
-            🎓 Explore Courses
-          </a>
+          <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener" class="btn-primary px-7 py-4 text-base flex items-center gap-2">📅 Book a Free Discovery Call</a>
+          <a href="#courses" class="btn-outline px-7 py-4 text-base flex items-center gap-2">🎓 Explore Courses</a>
         </div>
-
-        <!-- Social Proof Mini Stats -->
         <div class="flex flex-wrap gap-8">
-          <div>
-            <div class="stat-number text-3xl font-bold text-white">200<span class="gradient-text">+</span></div>
-            <div class="text-xs text-slate-400 mt-0.5">Students Trained</div>
-          </div>
+          <div><div class="stat-number text-3xl font-bold text-white">200<span class="gradient-text">+</span></div><div class="text-xs text-slate-400 mt-0.5">Students Trained</div></div>
           <div class="w-px bg-slate-700"></div>
-          <div>
-            <div class="stat-number text-3xl font-bold text-white">99.8<span class="gradient-text">%</span></div>
-            <div class="text-xs text-slate-400 mt-0.5">Model Accuracy</div>
-          </div>
+          <div><div class="stat-number text-3xl font-bold text-white">99.8<span class="gradient-text">%</span></div><div class="text-xs text-slate-400 mt-0.5">Model Accuracy</div></div>
           <div class="w-px bg-slate-700"></div>
-          <div>
-            <div class="stat-number text-3xl font-bold text-white">$21<span class="gradient-text">M+</span></div>
-            <div class="text-xs text-slate-400 mt-0.5">Spend Tracked</div>
-          </div>
+          <div><div class="stat-number text-3xl font-bold text-white">$21<span class="gradient-text">M+</span></div><div class="text-xs text-slate-400 mt-0.5">Spend Tracked</div></div>
           <div class="w-px bg-slate-700"></div>
-          <div>
-            <div class="stat-number text-3xl font-bold text-white">4<span class="gradient-text">+</span></div>
-            <div class="text-xs text-slate-400 mt-0.5">Countries Served</div>
-          </div>
+          <div><div class="stat-number text-3xl font-bold text-white">4<span class="gradient-text">+</span></div><div class="text-xs text-slate-400 mt-0.5">Countries Served</div></div>
         </div>
       </div>
 
-      <!-- Right Visual Card -->
+      <!-- Right: Dashboard mockup -->
       <div class="hidden lg:flex justify-center items-center">
         <div class="relative">
-          <!-- Main Dashboard Mockup -->
-          <div class="glass-card p-6 w-96" style="border-color:rgba(45,212,191,0.25)">
+          <div class="glass-card p-6 w-96" style="border-color:rgba(59,130,246,0.28)">
             <div class="flex items-center gap-2 mb-5">
               <div class="w-3 h-3 rounded-full bg-red-400 opacity-70"></div>
               <div class="w-3 h-3 rounded-full bg-yellow-400 opacity-70"></div>
               <div class="w-3 h-3 rounded-full bg-green-400 opacity-70"></div>
               <span class="ml-2 text-xs text-slate-500 font-mono">hasbal_dashboard.pbix</span>
             </div>
-
-            <!-- Mini Chart Bars -->
             <div class="mb-4">
               <div class="text-xs text-slate-400 mb-2 font-mono">Revenue Forecast · 2024</div>
               <div class="flex items-end gap-2 h-20">
-                <div class="flex-1 rounded-t" style="height:45%;background:rgba(45,212,191,0.3)"></div>
-                <div class="flex-1 rounded-t" style="height:60%;background:rgba(45,212,191,0.4)"></div>
-                <div class="flex-1 rounded-t" style="height:40%;background:rgba(45,212,191,0.3)"></div>
-                <div class="flex-1 rounded-t" style="height:75%;background:rgba(45,212,191,0.5)"></div>
-                <div class="flex-1 rounded-t" style="height:55%;background:rgba(45,212,191,0.4)"></div>
-                <div class="flex-1 rounded-t" style="height:90%;background:linear-gradient(180deg,#2DD4BF,#0D9488)"></div>
-                <div class="flex-1 rounded-t" style="height:80%;background:linear-gradient(180deg,#2DD4BF,#0D9488)"></div>
+                <div class="flex-1 rounded-t" style="height:45%;background:rgba(59,130,246,0.3)"></div>
+                <div class="flex-1 rounded-t" style="height:60%;background:rgba(59,130,246,0.42)"></div>
+                <div class="flex-1 rounded-t" style="height:40%;background:rgba(59,130,246,0.3)"></div>
+                <div class="flex-1 rounded-t" style="height:75%;background:rgba(16,185,129,0.45)"></div>
+                <div class="flex-1 rounded-t" style="height:55%;background:rgba(59,130,246,0.38)"></div>
+                <div class="flex-1 rounded-t" style="height:90%;background:linear-gradient(180deg,#3B82F6,#059669)"></div>
+                <div class="flex-1 rounded-t" style="height:80%;background:linear-gradient(180deg,#3B82F6,#059669)"></div>
               </div>
             </div>
-
-            <!-- KPI Row -->
             <div class="grid grid-cols-3 gap-3 mb-4">
-              <div class="rounded-lg p-3" style="background:rgba(45,212,191,0.06);border:1px solid rgba(45,212,191,0.12)">
+              <div class="rounded-lg p-3" style="background:rgba(59,130,246,0.07);border:1px solid rgba(59,130,246,0.15)">
                 <div class="text-xs text-slate-400">R² Score</div>
-                <div class="text-teal-400 font-mono font-bold text-lg">99.8%</div>
+                <div class="font-mono font-bold text-lg" style="color:#60A5FA">99.8%</div>
               </div>
-              <div class="rounded-lg p-3" style="background:rgba(240,180,41,0.06);border:1px solid rgba(240,180,41,0.12)">
+              <div class="rounded-lg p-3" style="background:rgba(16,185,129,0.07);border:1px solid rgba(16,185,129,0.15)">
                 <div class="text-xs text-slate-400">Spend</div>
-                <div class="font-mono font-bold text-lg" style="color:#F0B429">$21M</div>
+                <div class="font-mono font-bold text-lg" style="color:#34D399">$21M</div>
               </div>
-              <div class="rounded-lg p-3" style="background:rgba(45,212,191,0.06);border:1px solid rgba(45,212,191,0.12)">
+              <div class="rounded-lg p-3" style="background:rgba(59,130,246,0.07);border:1px solid rgba(59,130,246,0.15)">
                 <div class="text-xs text-slate-400">Models</div>
-                <div class="text-teal-400 font-mono font-bold text-lg">4+</div>
+                <div class="font-mono font-bold text-lg" style="color:#60A5FA">4+</div>
               </div>
             </div>
-
-            <!-- Skill Pills -->
             <div class="flex flex-wrap gap-2">
-              <span class="project-tag">Power BI</span>
-              <span class="project-tag">Python</span>
-              <span class="project-tag">SQL</span>
-              <span class="project-tag">Excel</span>
-              <span class="project-tag">Random Forest</span>
+              <span class="project-tag">Power BI</span><span class="project-tag">Python</span>
+              <span class="project-tag">SQL</span><span class="project-tag">Excel</span><span class="project-tag">ML</span>
             </div>
           </div>
-
-          <!-- Floating Badge 1 -->
-          <div class="absolute -top-5 -right-8 glass-card px-4 py-3 text-sm" style="border-color:rgba(240,180,41,0.3)">
+          <div class="absolute -top-5 -right-8 glass-card px-4 py-3 text-sm" style="border-color:rgba(240,180,41,0.35)">
             <div class="flex items-center gap-2">
               <span class="text-xl">🏆</span>
-              <div>
-                <div class="text-xs text-slate-400">Top Result</div>
-                <div class="font-bold text-white text-sm">99.8% Accuracy</div>
-              </div>
+              <div><div class="text-xs text-slate-400">Top Result</div><div class="font-bold text-white text-sm">99.8% Accuracy</div></div>
             </div>
           </div>
-
-          <!-- Floating Badge 2 -->
-          <div class="absolute -bottom-4 -left-8 glass-card px-4 py-3 text-sm" style="border-color:rgba(45,212,191,0.25)">
+          <div class="absolute -bottom-4 -left-8 glass-card px-4 py-3 text-sm" style="border-color:rgba(16,185,129,0.3)">
             <div class="flex items-center gap-2">
               <span class="text-xl">⚡</span>
-              <div>
-                <div class="text-xs text-slate-400">Next session</div>
-                <div class="font-bold text-teal-400 text-sm">Available Now</div>
-              </div>
+              <div><div class="text-xs text-slate-400">Next session</div><div class="font-bold text-sm" style="color:#34D399">Available Now</div></div>
             </div>
           </div>
         </div>
@@ -551,951 +396,582 @@
 
     </div>
   </div>
-
-  <!-- Scroll Indicator -->
-  <a href="#services" class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-slate-500 hover:text-teal-400 transition-colors">
+  <a href="#services" class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-slate-500 hover:text-blue-400 transition-colors">
     <span class="text-xs font-mono tracking-widest">SCROLL</span>
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="animate-bounce"><polyline points="6 9 12 15 18 9"/></svg>
   </a>
 </section>
+<div class="brand-divider"></div>
 
-<div class="teal-divider"></div>
 
-
-<!-- ═══════════════════════════════════════
-     SERVICES / EXPERTISE
-═══════════════════════════════════════ -->
-<section id="services" class="py-24 px-6 relative">
+<!-- ═══════ SERVICES ═══════ -->
+<section id="services" class="py-24 px-6">
   <div class="max-w-7xl mx-auto">
-
-    <!-- Section Header -->
     <div class="text-center mb-16 fade-up">
       <div class="section-label mb-3">What I Offer</div>
-      <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-4">
-        Services &amp; <span class="gradient-text">Expertise</span>
-      </h2>
-      <p class="text-slate-400 text-lg max-w-2xl mx-auto">
-        From raw spreadsheets to enterprise dashboards — I help you master the tools that matter and deliver results that speak for themselves.
-      </p>
+      <h2 style="font-family:'Cormorant Garamond',serif" class="text-4xl md:text-5xl font-bold text-white mb-4">Services &amp; <span class="gradient-text">Expertise</span></h2>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto">From raw spreadsheets to enterprise dashboards — I help you master the tools that matter and deliver results that speak for themselves.</p>
     </div>
-
-    <!-- Services Grid -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <!-- Excel -->
       <div class="glass-card p-7 fade-up">
         <div class="service-icon mb-5">📊</div>
-        <h3 class="text-white font-semibold text-xl mb-2 font-display">Microsoft Excel</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-4">From VLOOKUP to Power Query, VBA automation to dynamic dashboards. Learn Excel the way professionals use it — fast and formula-free where possible.</p>
-        <div class="flex flex-wrap gap-2">
-          <span class="project-tag">Pivot Tables</span>
-          <span class="project-tag">Power Query</span>
-          <span class="project-tag">VBA / Macros</span>
-          <span class="project-tag">Dashboards</span>
+        <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">Microsoft Excel</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">From VLOOKUP to Power Query, VBA automation to dynamic dashboards. Learn Excel the way professionals use it.</p>
+        <div class="flex flex-wrap gap-2"><span class="project-tag">Pivot Tables</span><span class="project-tag">Power Query</span><span class="project-tag">VBA / Macros</span><span class="project-tag">Dashboards</span></div>
+      </div>
+      <div class="glass-card p-7 fade-up" style="transition-delay:.05s">
+        <div class="service-icon mb-5">⚡</div>
+        <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">Power BI</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">Build interactive, boardroom-ready dashboards with advanced DAX, data models, and real-time insights decision-makers love.</p>
+        <div class="flex flex-wrap gap-2"><span class="project-tag">DAX</span><span class="project-tag">Data Modelling</span><span class="project-tag">Reports</span><span class="project-tag">Visualisations</span></div>
+      </div>
+      <div class="glass-card p-7 fade-up" style="transition-delay:.10s">
+        <div class="service-icon mb-5">🔄</div>
+        <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">Google Sheets</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">Automate workflows, build collaborative trackers, and leverage Google Apps Script for full Sheets power.</p>
+        <div class="flex flex-wrap gap-2"><span class="project-tag">Apps Script</span><span class="project-tag">Automation</span><span class="project-tag">Looker Studio</span><span class="project-tag">Collaboration</span></div>
+      </div>
+      <div class="glass-card p-7 fade-up" style="transition-delay:.15s">
+        <div class="service-icon mb-5">🗄️</div>
+        <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">SQL &amp; Databases</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">From beginner SELECT statements to advanced joins, CTEs, and window functions for deep analysis.</p>
+        <div class="flex flex-wrap gap-2"><span class="project-tag">PostgreSQL</span><span class="project-tag">MySQL</span><span class="project-tag">CTEs</span><span class="project-tag">Window Functions</span></div>
+      </div>
+      <div class="glass-card p-7 fade-up" style="transition-delay:.20s">
+        <div class="service-icon mb-5">🧠</div>
+        <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">Data Analysis &amp; ML</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">Python-powered analysis, statistical modelling, and machine learning — from exploratory to production-ready models.</p>
+        <div class="flex flex-wrap gap-2"><span class="project-tag">Python</span><span class="project-tag">Pandas</span><span class="project-tag">Scikit-Learn</span><span class="project-tag">Streamlit</span></div>
+      </div>
+      <div class="glass-card p-7 fade-up" style="transition-delay:.25s">
+        <div class="service-icon mb-5">🚀</div>
+        <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">Automation &amp; Consulting</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">End-to-end data consulting: process automation, reporting pipelines, and bespoke dashboards that save hours weekly.</p>
+        <div class="flex flex-wrap gap-2"><span class="project-tag">Process Automation</span><span class="project-tag">Reporting</span><span class="project-tag">Bespoke Dashboards</span></div>
+      </div>
+    </div>
+    <div class="mt-14 fade-up rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 cta-banner">
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-semibold text-white mb-1">Not sure where to start?</h3>
+        <p class="text-slate-400">Book a free 30-minute discovery call and I'll map the fastest path to your goals.</p>
+      </div>
+      <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener" class="btn-primary px-8 py-4 text-sm whitespace-nowrap flex-shrink-0">📅 Book Discovery Call →</a>
+    </div>
+  </div>
+</section>
+<div class="brand-divider"></div>
+
+
+<!-- ═══════ COURSES ═══════ -->
+<section id="courses" class="py-24 px-6 relative" style="background:linear-gradient(180deg,rgba(4,9,26,0) 0%,rgba(7,16,40,0.5) 50%,rgba(4,9,26,0) 100%)">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16 fade-up">
+      <div class="section-label mb-3">Learn at Your Own Pace</div>
+      <h2 style="font-family:'Cormorant Garamond',serif" class="text-4xl md:text-5xl font-bold text-white mb-4">Featured <span class="gradient-text">Courses</span></h2>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto">Can't commit to live sessions? These self-paced masterclasses give you everything you need — structured, practical, and built for real results.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Excel -->
+      <div class="glass-card relative overflow-hidden fade-up group">
+        <span class="ribbon">BESTSELLER</span>
+        <div class="p-7 pb-4">
+          <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5 text-3xl" style="background:linear-gradient(135deg,rgba(16,185,129,0.15),rgba(5,150,105,0.1));border:1px solid rgba(16,185,129,0.22)">📗</div>
+          <span class="project-tag mb-3 inline-block" style="color:#34D399;background:rgba(16,185,129,0.1);border-color:rgba(16,185,129,0.22)">Microsoft Excel</span>
+          <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-bold text-white mb-2">Excel Masterclass</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Master Excel from zero to advanced — formulas, Pivot Tables, Power Query, dashboards, and automation.</p>
+        </div>
+        <div class="px-7 pb-4 flex flex-col gap-2">
+          <div class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#34D399">✓</span> Beginner to Advanced curriculum</div>
+          <div class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#34D399">✓</span> Real-world project files included</div>
+          <div class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#34D399">✓</span> VBA &amp; Automation modules</div>
+          <div class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#34D399">✓</span> Lifetime access + updates</div>
+        </div>
+        <div class="p-7 pt-4" style="border-top:1px solid rgba(59,130,246,0.1)">
+          <a href="https://selar.com/excel-masterclass" target="_blank" rel="noopener" class="btn-primary w-full py-3.5 text-sm text-center block">🚀 Enrol Now →</a>
         </div>
       </div>
 
       <!-- Power BI -->
-      <div class="glass-card p-7 fade-up" style="transition-delay:0.05s">
-        <div class="service-icon mb-5">⚡</div>
-        <h3 class="text-white font-semibold text-xl mb-2 font-display">Power BI</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-4">Build interactive, boardroom-ready dashboards with advanced DAX measures, data models, and real-time insights that decision-makers love.</p>
-        <div class="flex flex-wrap gap-2">
-          <span class="project-tag">DAX</span>
-          <span class="project-tag">Data Modelling</span>
-          <span class="project-tag">Reports</span>
-          <span class="project-tag">Visualisations</span>
-        </div>
-      </div>
-
-      <!-- Google Sheets -->
-      <div class="glass-card p-7 fade-up" style="transition-delay:0.1s">
-        <div class="service-icon mb-5">🔄</div>
-        <h3 class="text-white font-semibold text-xl mb-2 font-display">Google Sheets</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-4">Automate workflows, build collaborative trackers, and leverage Google Apps Script to unlock the full power of Sheets for your business.</p>
-        <div class="flex flex-wrap gap-2">
-          <span class="project-tag">Apps Script</span>
-          <span class="project-tag">Automation</span>
-          <span class="project-tag">Looker Studio</span>
-          <span class="project-tag">Collaboration</span>
-        </div>
-      </div>
-
-      <!-- SQL -->
-      <div class="glass-card p-7 fade-up" style="transition-delay:0.15s">
-        <div class="service-icon mb-5">🗄️</div>
-        <h3 class="text-white font-semibold text-xl mb-2 font-display">SQL & Databases</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-4">Query, clean, and transform data like a pro. From beginner SELECT statements to advanced joins, CTEs, and window functions for deep analysis.</p>
-        <div class="flex flex-wrap gap-2">
-          <span class="project-tag">PostgreSQL</span>
-          <span class="project-tag">MySQL</span>
-          <span class="project-tag">CTEs</span>
-          <span class="project-tag">Window Functions</span>
-        </div>
-      </div>
-
-      <!-- Data Analysis -->
-      <div class="glass-card p-7 fade-up" style="transition-delay:0.2s">
-        <div class="service-icon mb-5">🧠</div>
-        <h3 class="text-white font-semibold text-xl mb-2 font-display">Data Analysis & ML</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-4">Python-powered data analysis, statistical modelling, and machine learning — from exploratory analysis to production-ready predictive models.</p>
-        <div class="flex flex-wrap gap-2">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">Pandas</span>
-          <span class="project-tag">Scikit-Learn</span>
-          <span class="project-tag">Streamlit</span>
-        </div>
-      </div>
-
-      <!-- Consulting / Automation -->
-      <div class="glass-card p-7 fade-up" style="transition-delay:0.25s">
-        <div class="service-icon mb-5">🚀</div>
-        <h3 class="text-white font-semibold text-xl mb-2 font-display">Automation & Consulting</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-4">End-to-end data consulting for small businesses: process automation, reporting pipelines, and bespoke dashboards that save hours every week.</p>
-        <div class="flex flex-wrap gap-2">
-          <span class="project-tag">Process Automation</span>
-          <span class="project-tag">Reporting</span>
-          <span class="project-tag">Bespoke Dashboards</span>
-        </div>
-      </div>
-
-    </div><!-- /grid -->
-
-    <!-- CTA Banner -->
-    <div class="mt-14 fade-up rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6" style="background:linear-gradient(135deg,rgba(13,148,136,0.15),rgba(45,212,191,0.08));border:1px solid rgba(45,212,191,0.2)">
-      <div>
-        <h3 class="font-display text-2xl font-semibold text-white mb-1">Not sure where to start?</h3>
-        <p class="text-slate-400">Book a free 30-minute discovery call and I'll map the fastest path to your goals.</p>
-      </div>
-      <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener"
-         class="btn-primary px-8 py-4 text-sm whitespace-nowrap flex-shrink-0">
-        📅 Book Discovery Call →
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<div class="teal-divider"></div>
-
-
-<!-- ═══════════════════════════════════════
-     FEATURED SELF-PACED COURSES
-═══════════════════════════════════════ -->
-<section id="courses" class="py-24 px-6 relative" style="background:linear-gradient(180deg, rgba(8,15,26,0) 0%, rgba(13,30,50,0.4) 50%, rgba(8,15,26,0) 100%)">
-  <div class="max-w-7xl mx-auto">
-
-    <!-- Section Header -->
-    <div class="text-center mb-16 fade-up">
-      <div class="section-label mb-3">Learn at Your Own Pace</div>
-      <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-4">
-        Featured <span class="gradient-text">Courses</span>
-      </h2>
-      <p class="text-slate-400 text-lg max-w-2xl mx-auto">
-        Can't commit to live sessions? These self-paced masterclasses give you everything you need — structured, practical, and built for real results.
-      </p>
-    </div>
-
-    <!-- Course Cards -->
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <!-- Course 1: Excel -->
-      <div class="glass-card relative overflow-hidden fade-up group">
-        <span class="ribbon">BESTSELLER</span>
-        <!-- Course Header -->
+      <div class="glass-card relative overflow-hidden fade-up group" style="transition-delay:.08s;border-color:rgba(59,130,246,0.3)">
+        <span class="ribbon" style="background:linear-gradient(135deg,#2563EB,#059669)">TOP RATED</span>
         <div class="p-7 pb-4">
-          <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5 text-3xl" style="background:linear-gradient(135deg,rgba(34,197,94,0.15),rgba(16,185,129,0.1));border:1px solid rgba(34,197,94,0.2)">📗</div>
-          <span class="project-tag mb-3 inline-block">Microsoft Excel</span>
-          <h3 class="font-display text-2xl font-bold text-white mb-2">Excel Masterclass</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Master Excel from zero to advanced — formulas, Pivot Tables, Power Query, dashboards, and automation. The only Excel course you'll ever need.</p>
-        </div>
-        <!-- Highlights -->
-        <div class="px-7 pb-4">
-          <div class="flex flex-col gap-2">
-            <div class="flex items-center gap-2 text-sm text-slate-300"><span class="text-teal-400">✓</span> Beginner to Advanced curriculum</div>
-            <div class="flex items-center gap-2 text-sm text-slate-300"><span class="text-teal-400">✓</span> Real-world project files included</div>
-            <div class="flex items-center gap-2 text-sm text-slate-300"><span class="text-teal-400">✓</span> VBA &amp; Automation modules</div>
-            <div class="flex items-center gap-2 text-sm text-slate-300"><span class="text-teal-400">✓</span> Lifetime access + updates</div>
-          </div>
-        </div>
-        <!-- Footer -->
-        <div class="p-7 pt-4" style="border-top:1px solid rgba(45,212,191,0.1)">
-          <a href="https://selar.com/excel-masterclass" target="_blank" rel="noopener"
-             class="btn-primary w-full py-3.5 text-sm text-center block">
-            🚀 Enrol Now →
-          </a>
-        </div>
-      </div>
-
-      <!-- Course 2: Power BI -->
-      <div class="glass-card relative overflow-hidden fade-up group" style="transition-delay:0.08s;border-color:rgba(45,212,191,0.3)">
-        <span class="ribbon" style="background:linear-gradient(135deg,#2DD4BF,#0D9488)">TOP RATED</span>
-        <div class="p-7 pb-4">
-          <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5 text-3xl" style="background:linear-gradient(135deg,rgba(45,212,191,0.15),rgba(13,148,136,0.1));border:1px solid rgba(45,212,191,0.2)">⚡</div>
+          <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5 text-3xl" style="background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(16,185,129,0.1));border:1px solid rgba(59,130,246,0.22)">⚡</div>
           <span class="project-tag mb-3 inline-block">Power BI</span>
-          <h3 class="font-display text-2xl font-bold text-white mb-2">Power BI Masterclass</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Build stunning, interactive dashboards from scratch. Master DAX, data modelling, and Power Query — and land your next data role with confidence.</p>
+          <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-bold text-white mb-2">Power BI Masterclass</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Build stunning, interactive dashboards. Master DAX, data modelling, and Power Query — and land your next data role.</p>
         </div>
-        <div class="px-7 pb-4">
-          <div class="flex flex-col gap-2">
-            <div class="flex items-center gap-2 text-sm text-slate-300"><span class="text-teal-400">✓</span> Complete DAX deep dive</div>
-            <div class="flex items-center gap-2 text-sm text-slate-300"><span class="text-teal-400">✓</span> Star schema data modelling</div>
-            <div class="flex items-center gap-2 text-sm text-slate-300"><span class="text-teal-400">✓</span> 5+ end-to-end projects</div>
-            <div class="flex items-center gap-2 text-sm text-slate-300"><span class="text-teal-400">✓</span> Certificate of completion</div>
-          </div>
+        <div class="px-7 pb-4 flex flex-col gap-2">
+          <div class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#60A5FA">✓</span> Complete DAX deep dive</div>
+          <div class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#60A5FA">✓</span> Star schema data modelling</div>
+          <div class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#60A5FA">✓</span> 5+ end-to-end projects</div>
+          <div class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#60A5FA">✓</span> Certificate of completion</div>
         </div>
-        <div class="p-7 pt-4" style="border-top:1px solid rgba(45,212,191,0.1)">
-          <a href="https://selar.com/power-bi-masterclass" target="_blank" rel="noopener"
-             class="btn-primary w-full py-3.5 text-sm text-center block">
-            🚀 Enrol Now →
-          </a>
+        <div class="p-7 pt-4" style="border-top:1px solid rgba(59,130,246,0.1)">
+          <a href="https://selar.com/power-bi-masterclass" target="_blank" rel="noopener" class="btn-primary w-full py-3.5 text-sm text-center block">🚀 Enrol Now →</a>
         </div>
       </div>
 
-      <!-- Course 3: 2-Hour Analyst OS -->
-      <div class="glass-card relative overflow-hidden fade-up group" style="transition-delay:0.16s">
+      <!-- 2-Hour Analyst OS -->
+      <div class="glass-card relative overflow-hidden fade-up group" style="transition-delay:.16s">
         <span class="ribbon" style="background:linear-gradient(135deg,#8B5CF6,#7C3AED)">NEW</span>
         <div class="p-7 pb-4">
-          <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5 text-3xl" style="background:linear-gradient(135deg,rgba(139,92,246,0.15),rgba(124,58,237,0.1));border:1px solid rgba(139,92,246,0.2)">🧬</div>
-          <span class="project-tag mb-3 inline-block" style="background:rgba(139,92,246,0.1);border-color:rgba(139,92,246,0.2);color:#A78BFA">Productivity System</span>
-          <h3 class="font-display text-2xl font-bold text-white mb-2">The 2-Hour Analyst OS</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">The complete operating system for data analysts — frameworks, templates, and workflows to do in 2 hours what others take 8 hours to do.</p>
+          <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-5 text-3xl" style="background:linear-gradient(135deg,rgba(139,92,246,0.15),rgba(124,58,237,0.1));border:1px solid rgba(139,92,246,0.22)">🧬</div>
+          <span class="project-tag mb-3 inline-block" style="background:rgba(139,92,246,0.1);border-color:rgba(139,92,246,0.22);color:#A78BFA">Productivity System</span>
+          <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-bold text-white mb-2">The 2-Hour Analyst OS</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">The complete operating system for analysts — frameworks, templates, and workflows to do in 2 hours what others take 8.</p>
         </div>
-        <div class="px-7 pb-4">
-          <div class="flex flex-col gap-2">
-            <div class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#A78BFA">✓</span> Plug-and-play analyst templates</div>
-            <div class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#A78BFA">✓</span> Workflow automation guides</div>
-            <div class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#A78BFA">✓</span> Time-saving cheat sheets</div>
-            <div class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#A78BFA">✓</span> Private community access</div>
-          </div>
+        <div class="px-7 pb-4 flex flex-col gap-2">
+          <div class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#A78BFA">✓</span> Plug-and-play analyst templates</div>
+          <div class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#A78BFA">✓</span> Workflow automation guides</div>
+          <div class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#A78BFA">✓</span> Time-saving cheat sheets</div>
+          <div class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#A78BFA">✓</span> Private community access</div>
         </div>
         <div class="p-7 pt-4" style="border-top:1px solid rgba(139,92,246,0.15)">
           <a href="https://selar.com/the_2-hour_analyst_os" target="_blank" rel="noopener"
-             class="w-full py-3.5 text-sm text-center block rounded-lg font-bold transition-all duration-200"
-             style="background:linear-gradient(135deg,#7C3AED,#6D28D9);color:white;box-shadow:0 4px 24px rgba(124,58,237,0.3)">
-            🚀 Get It Now →
-          </a>
+             class="w-full py-3.5 text-sm text-center block rounded-lg font-bold"
+             style="background:linear-gradient(135deg,#7C3AED,#6D28D9);color:white;box-shadow:0 4px 24px rgba(124,58,237,0.3)">🚀 Get It Now →</a>
         </div>
       </div>
 
-    </div><!-- /courses grid -->
-
-    <!-- Selar Promo Strip -->
-    <div class="mt-10 text-center fade-up">
-      <p class="text-slate-500 text-sm">All courses hosted on <span class="text-teal-400 font-semibold">Selar.com</span> · Secure checkout · Instant access · 100% practical</p>
     </div>
-
+    <div class="mt-10 text-center fade-up">
+      <p class="text-slate-500 text-sm">All courses on <span style="color:#60A5FA" class="font-semibold">Selar.com</span> · Secure checkout · Instant access · 100% practical</p>
+    </div>
   </div>
 </section>
+<div class="brand-divider"></div>
 
-<div class="teal-divider"></div>
 
-
-<!-- ═══════════════════════════════════════
-     PORTFOLIO / CASE STUDIES
-═══════════════════════════════════════ -->
+<!-- ═══════ PORTFOLIO ═══════ -->
 <section id="portfolio" class="py-24 px-6">
   <div class="max-w-7xl mx-auto">
-
-    <!-- Section Header -->
     <div class="text-center mb-16 fade-up">
       <div class="section-label mb-3">Proof of Work</div>
-      <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-4">
-        Portfolio &amp; <span class="gradient-text">Case Studies</span>
-      </h2>
-      <p class="text-slate-400 text-lg max-w-2xl mx-auto">
-        Real projects. Real results. Here's what's possible when data expertise meets execution.
-      </p>
+      <h2 style="font-family:'Cormorant Garamond',serif" class="text-4xl md:text-5xl font-bold text-white mb-4">Portfolio &amp; <span class="gradient-text">Case Studies</span></h2>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto">Real projects. Real results. Here's what's possible when data expertise meets execution.</p>
     </div>
-
-    <!-- Projects Grid -->
     <div class="grid lg:grid-cols-2 gap-8">
 
-      <!-- Project 1: BPSS Power BI Dashboard -->
-      <div class="glass-card p-8 fade-up group lg:col-span-2" style="transition-delay:0.32s;border-color:rgba(45,212,191,0.2)">
+      <!-- BPSS — full width -->
+      <div class="glass-card p-8 fade-up group lg:col-span-2" style="border-color:rgba(59,130,246,0.2)">
         <div class="flex items-start gap-4 mb-6">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0" style="background:linear-gradient(135deg,rgba(45,212,191,0.2),rgba(13,148,136,0.1));border:1px solid rgba(45,212,191,0.25)">📋</div>
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0" style="background:linear-gradient(135deg,rgba(59,130,246,0.2),rgba(16,185,129,0.1));border:1px solid rgba(59,130,246,0.25)">📋</div>
           <div class="flex-1">
             <div class="flex flex-wrap gap-2 mb-2">
-              <span class="project-tag">Power BI</span>
-              <span class="project-tag">DAX</span>
-              <span class="project-tag">Power Automate</span>
-              <span class="project-tag">OneDrive</span>
-              <span class="project-tag">Excel</span>
+              <span class="project-tag">Power BI</span><span class="project-tag">DAX</span>
+              <span class="project-tag">Power Automate</span><span class="project-tag">OneDrive</span><span class="project-tag">Excel</span>
             </div>
-            <h3 class="font-display text-2xl font-bold text-white">BPSS Project Management Dashboard</h3>
+            <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-bold text-white">BPSS Project Management Dashboard</h3>
             <p class="text-slate-400 text-sm mt-1">Confidential Client · India</p>
           </div>
         </div>
-
-        <!-- Dashboard Preview Screenshots -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6 rounded-xl overflow-hidden">
-          <div class="rounded-lg overflow-hidden" style="border:1px solid rgba(45,212,191,0.15)">
-            <div class="bg-slate-800 px-2 py-1 text-xs text-slate-400 font-mono">Executive Overview</div>
-            <div class="h-20 flex items-center justify-center text-slate-600 text-xs" style="background:rgba(15,25,41,0.8)">
-              <div class="text-center">
-                <div class="text-2xl font-bold text-white font-mono">100</div>
-                <div class="text-teal-400 text-xs">Total Projects</div>
-              </div>
-            </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+          <div class="rounded-lg overflow-hidden" style="border:1px solid rgba(59,130,246,0.18)">
+            <div class="px-3 py-1.5 text-xs text-slate-400 font-mono" style="background:rgba(59,130,246,0.08)">Executive Overview</div>
+            <div class="h-20 flex items-center justify-center" style="background:rgba(7,16,32,0.8)"><div class="text-center"><div class="text-2xl font-bold text-white font-mono">100</div><div class="text-xs" style="color:#60A5FA">Total Projects</div></div></div>
           </div>
-          <div class="rounded-lg overflow-hidden" style="border:1px solid rgba(45,212,191,0.15)">
-            <div class="bg-slate-800 px-2 py-1 text-xs text-slate-400 font-mono">PM Tracker</div>
-            <div class="h-20 flex items-center justify-center" style="background:rgba(15,25,41,0.8)">
-              <div class="text-center">
-                <div class="text-2xl font-bold text-white font-mono">6</div>
-                <div class="text-teal-400 text-xs">Project Managers</div>
-              </div>
-            </div>
+          <div class="rounded-lg overflow-hidden" style="border:1px solid rgba(59,130,246,0.18)">
+            <div class="px-3 py-1.5 text-xs text-slate-400 font-mono" style="background:rgba(59,130,246,0.08)">PM Tracker</div>
+            <div class="h-20 flex items-center justify-center" style="background:rgba(7,16,32,0.8)"><div class="text-center"><div class="text-2xl font-bold text-white font-mono">6</div><div class="text-xs" style="color:#60A5FA">Project Managers</div></div></div>
           </div>
-          <div class="rounded-lg overflow-hidden" style="border:1px solid rgba(45,212,191,0.15)">
-            <div class="bg-slate-800 px-2 py-1 text-xs text-slate-400 font-mono">Quality Deep Dive</div>
-            <div class="h-20 flex items-center justify-center" style="background:rgba(15,25,41,0.8)">
-              <div class="text-center">
-                <div class="text-2xl font-bold text-white font-mono">3.43</div>
-                <div class="text-teal-400 text-xs">Avg Rating</div>
-              </div>
-            </div>
+          <div class="rounded-lg overflow-hidden" style="border:1px solid rgba(16,185,129,0.18)">
+            <div class="px-3 py-1.5 text-xs text-slate-400 font-mono" style="background:rgba(16,185,129,0.07)">Quality Deep Dive</div>
+            <div class="h-20 flex items-center justify-center" style="background:rgba(7,16,32,0.8)"><div class="text-center"><div class="text-2xl font-bold text-white font-mono">3.43</div><div class="text-xs" style="color:#34D399">Avg Rating</div></div></div>
           </div>
-          <div class="rounded-lg overflow-hidden" style="border:1px solid rgba(45,212,191,0.15)">
-            <div class="bg-slate-800 px-2 py-1 text-xs text-slate-400 font-mono">Trends</div>
-            <div class="h-20 flex items-center justify-center" style="background:rgba(15,25,41,0.8)">
-              <div class="text-center">
-                <div class="text-2xl font-bold text-white font-mono">59.38<span class="text-lg">%</span></div>
-                <div class="text-teal-400 text-xs">Overall Score</div>
-              </div>
-            </div>
+          <div class="rounded-lg overflow-hidden" style="border:1px solid rgba(16,185,129,0.18)">
+            <div class="px-3 py-1.5 text-xs text-slate-400 font-mono" style="background:rgba(16,185,129,0.07)">Trends</div>
+            <div class="h-20 flex items-center justify-center" style="background:rgba(7,16,32,0.8)"><div class="text-center"><div class="text-2xl font-bold text-white font-mono">59.38<span class="text-base">%</span></div><div class="text-xs" style="color:#34D399">Overall Score</div></div></div>
           </div>
         </div>
-
-        <p class="text-slate-400 text-sm leading-relaxed mb-6">
-          Designed and delivered a fully automated, multi-page Power BI report for a confidential client in India — tracking 100 projects across 5 global regions (AMER, APAC, EMEA, LATAM, NORAM) and 6 Project Managers. The entire data pipeline was automated: an Excel workbook on OneDrive is continuously refreshed by a <strong class="text-white">Power Automate flow</strong> I configured, feeding live data directly into Power BI with zero manual intervention.
-        </p>
-
-        <!-- 4-Page Feature Grid -->
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">Designed and delivered a fully automated multi-page Power BI report for a confidential client in India — tracking 100 projects across 5 global regions (AMER, APAC, EMEA, LATAM, NORAM) and 6 Project Managers. The entire pipeline was automated: Excel on OneDrive is refreshed by a <strong class="text-white">Power Automate flow</strong> I configured, feeding live data into Power BI with zero manual intervention.</p>
         <div class="grid md:grid-cols-2 gap-4 mb-6">
-          <div class="rounded-xl p-4" style="background:rgba(45,212,191,0.05);border:1px solid rgba(45,212,191,0.12)">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="text-teal-400 text-lg">📊</span>
-              <span class="text-white font-semibold text-sm">Executive Overview</span>
-            </div>
-            <p class="text-slate-400 text-xs leading-relaxed">Top-level KPIs (Total Projects, Completion Rate, Overall Score), project count by region (donut chart), monthly trend bar chart, and status breakdown — all filterable by date range, PM, and region.</p>
-          </div>
-          <div class="rounded-xl p-4" style="background:rgba(45,212,191,0.05);border:1px solid rgba(45,212,191,0.12)">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="text-teal-400 text-lg">🎯</span>
-              <span class="text-white font-semibold text-sm">Project &amp; PM Tracker</span>
-            </div>
-            <p class="text-slate-400 text-xs leading-relaxed">Granular project-level table with Region, Month, Status, Avg Rating &amp; Turnaround Days. Bar chart breakdown by PM showing workload distribution across all 6 managers.</p>
-          </div>
-          <div class="rounded-xl p-4" style="background:rgba(45,212,191,0.05);border:1px solid rgba(45,212,191,0.12)">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="text-teal-400 text-lg">🔬</span>
-              <span class="text-white font-semibold text-sm">Quality Deep Dive</span>
-            </div>
-            <p class="text-slate-400 text-xs leading-relaxed">Heatmap-style rating matrix scoring 10 criteria per project (Communication, Domain Knowledge, Framework, Infrastructure, etc.). Avg ratings by PM and by Region with conditional colour coding.</p>
-          </div>
-          <div class="rounded-xl p-4" style="background:rgba(45,212,191,0.05);border:1px solid rgba(45,212,191,0.12)">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="text-teal-400 text-lg">📈</span>
-              <span class="text-white font-semibold text-sm">Project Trends</span>
-            </div>
-            <p class="text-slate-400 text-xs leading-relaxed">Turnaround Days trend line by project, Overall Experience by BPSS Month stacked bar, and a scatter plot of Turnaround Days vs Avg Rating segmented by all 5 regions.</p>
-          </div>
+          <div class="rounded-xl p-4" style="background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.12)"><div class="flex items-center gap-2 mb-2"><span style="color:#60A5FA">📊</span><span class="text-white font-semibold text-sm">Executive Overview</span></div><p class="text-slate-400 text-xs leading-relaxed">KPIs, regional donut chart, monthly trend bar, status breakdown — all filterable by date, PM, and region.</p></div>
+          <div class="rounded-xl p-4" style="background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.12)"><div class="flex items-center gap-2 mb-2"><span style="color:#60A5FA">🎯</span><span class="text-white font-semibold text-sm">Project &amp; PM Tracker</span></div><p class="text-slate-400 text-xs leading-relaxed">Granular project table with Region, Month, Status, Avg Rating &amp; Turnaround Days. Workload chart for all 6 PMs.</p></div>
+          <div class="rounded-xl p-4" style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.12)"><div class="flex items-center gap-2 mb-2"><span style="color:#34D399">🔬</span><span class="text-white font-semibold text-sm">Quality Deep Dive</span></div><p class="text-slate-400 text-xs leading-relaxed">Heatmap rating matrix across 10 criteria per project. Avg ratings by PM and Region with conditional colour coding.</p></div>
+          <div class="rounded-xl p-4" style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.12)"><div class="flex items-center gap-2 mb-2"><span style="color:#34D399">📈</span><span class="text-white font-semibold text-sm">Project Trends</span></div><p class="text-slate-400 text-xs leading-relaxed">Turnaround trend line, stacked experience bar by month, scatter plot of Turnaround vs Avg Rating by region.</p></div>
         </div>
-
-        <!-- Key Highlights -->
         <div class="space-y-3 mb-6">
-          <div class="flex items-start gap-3 text-sm">
-            <span class="text-teal-400 mt-0.5 flex-shrink-0">▸</span>
-            <span class="text-slate-300">Configured end-to-end <strong class="text-white">Power Automate pipeline</strong> — Excel on OneDrive auto-populated, Power BI refreshed automatically, zero manual data entry</span>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <span class="text-teal-400 mt-0.5 flex-shrink-0">▸</span>
-            <span class="text-slate-300">Built advanced <strong class="text-white">DAX measures</strong> for YTD scoring, rating bands, completion rates, and turnaround KPIs across 4 report pages</span>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <span class="text-teal-400 mt-0.5 flex-shrink-0">▸</span>
-            <span class="text-slate-300">Integrated <strong class="text-white">Power BI Q&amp;A natural language visual</strong> enabling stakeholders to query their own data in plain English</span>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <span class="text-teal-400 mt-0.5 flex-shrink-0">▸</span>
-            <span class="text-slate-300">Cross-report <strong class="text-white">slicers synced</strong> across all 4 pages — filter by date range, status, PM name, and region simultaneously</span>
-          </div>
+          <div class="flex items-start gap-3 text-sm"><span style="color:#60A5FA" class="mt-0.5 flex-shrink-0">▸</span><span class="text-slate-300">Configured end-to-end <strong class="text-white">Power Automate pipeline</strong> — zero manual data entry required</span></div>
+          <div class="flex items-start gap-3 text-sm"><span style="color:#60A5FA" class="mt-0.5 flex-shrink-0">▸</span><span class="text-slate-300">Advanced <strong class="text-white">DAX measures</strong> for YTD scoring, rating bands, completion rates, and turnaround KPIs</span></div>
+          <div class="flex items-start gap-3 text-sm"><span style="color:#34D399" class="mt-0.5 flex-shrink-0">▸</span><span class="text-slate-300">Integrated <strong class="text-white">Power BI Q&amp;A natural language visual</strong> for stakeholder self-service queries</span></div>
+          <div class="flex items-start gap-3 text-sm"><span style="color:#34D399" class="mt-0.5 flex-shrink-0">▸</span><span class="text-slate-300">Cross-page <strong class="text-white">synced slicers</strong> — filter by date, status, PM, and region simultaneously</span></div>
         </div>
-
-        <!-- Result Badges -->
         <div class="flex flex-wrap gap-3">
-          <span class="result-badge">📋 100 Projects Tracked</span>
-          <span class="result-badge">🌍 5 Global Regions</span>
-          <span class="result-badge">⚡ Fully Automated Pipeline</span>
-          <span class="result-badge">📐 4-Page Report</span>
-          <span class="result-badge">🗣️ NL Q&amp;A Visual</span>
+          <span class="result-badge">📋 100 Projects</span><span class="result-badge">🌍 5 Global Regions</span>
+          <span class="result-badge">⚡ Fully Automated</span><span class="result-badge">📐 4-Page Report</span><span class="result-badge">🗣️ NL Q&amp;A Visual</span>
         </div>
       </div>
 
-      <!-- Project 2: Supermarket Revenue Forecasting -->
+      <!-- Supermarket -->
       <div class="glass-card p-8 fade-up group">
         <div class="flex items-start gap-4 mb-6">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0" style="background:linear-gradient(135deg,rgba(45,212,191,0.2),rgba(13,148,136,0.1));border:1px solid rgba(45,212,191,0.2)">🛒</div>
-          <div>
-            <div class="flex flex-wrap gap-2 mb-2">
-              <span class="project-tag">Python</span>
-              <span class="project-tag">Random Forest</span>
-              <span class="project-tag">Streamlit</span>
-              <span class="project-tag">SHAP</span>
-            </div>
-            <h3 class="font-display text-2xl font-bold text-white">Supermarket Revenue Forecasting System</h3>
-          </div>
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0" style="background:linear-gradient(135deg,rgba(59,130,246,0.2),rgba(16,185,129,0.1));border:1px solid rgba(59,130,246,0.2)">🛒</div>
+          <div><div class="flex flex-wrap gap-2 mb-2"><span class="project-tag">Python</span><span class="project-tag">Random Forest</span><span class="project-tag">Streamlit</span><span class="project-tag">SHAP</span></div>
+          <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-bold text-white">Supermarket Revenue Forecasting</h3></div>
         </div>
-
-        <p class="text-slate-400 text-sm leading-relaxed mb-6">
-          Built an end-to-end ML pipeline for a supermarket chain to forecast peak-demand revenue. Used Random Forest regression with SHAP explainability so business stakeholders could understand <em>why</em> the model made each prediction — not just what it predicted.
-        </p>
-
-        <!-- Highlights -->
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">End-to-end ML pipeline for a supermarket chain to forecast peak-demand revenue. Random Forest regression with SHAP explainability so stakeholders understood <em>why</em> each prediction was made.</p>
         <div class="space-y-3 mb-6">
-          <div class="flex items-start gap-3 text-sm">
-            <span class="text-teal-400 mt-0.5 flex-shrink-0">▸</span>
-            <span class="text-slate-300">Achieved <strong class="text-white">99.8% R² accuracy</strong> on holdout test data — near-perfect forecasting performance</span>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <span class="text-teal-400 mt-0.5 flex-shrink-0">▸</span>
-            <span class="text-slate-300">Integrated SHAP values for full <strong class="text-white">model explainability</strong> and business transparency</span>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <span class="text-teal-400 mt-0.5 flex-shrink-0">▸</span>
-            <span class="text-slate-300">Deployed interactive <strong class="text-white">Streamlit dashboard</strong> for real-time peak demand analysis</span>
-          </div>
+          <div class="flex items-start gap-3 text-sm"><span style="color:#60A5FA" class="mt-0.5 flex-shrink-0">▸</span><span class="text-slate-300">Achieved <strong class="text-white">99.8% R² accuracy</strong> on holdout test data</span></div>
+          <div class="flex items-start gap-3 text-sm"><span style="color:#60A5FA" class="mt-0.5 flex-shrink-0">▸</span><span class="text-slate-300">SHAP values for full <strong class="text-white">model explainability</strong> and business transparency</span></div>
+          <div class="flex items-start gap-3 text-sm"><span style="color:#34D399" class="mt-0.5 flex-shrink-0">▸</span><span class="text-slate-300">Deployed interactive <strong class="text-white">Streamlit dashboard</strong> for real-time demand analysis</span></div>
         </div>
-
-        <!-- Result Badges -->
-        <div class="flex flex-wrap gap-3">
-          <span class="result-badge">🎯 R² = 99.8%</span>
-          <span class="result-badge">📊 Live Dashboard</span>
-          <span class="result-badge">🔍 SHAP Explainability</span>
-        </div>
+        <div class="flex flex-wrap gap-3"><span class="result-badge">🎯 R² = 99.8%</span><span class="result-badge">📊 Live Dashboard</span><span class="result-badge">🔍 SHAP</span></div>
       </div>
 
-      <!-- Project 3: Hospital Procurement Dashboard -->
-      <div class="glass-card p-8 fade-up group" style="transition-delay:0.08s">
+      <!-- Hospital -->
+      <div class="glass-card p-8 fade-up group" style="transition-delay:.08s">
         <div class="flex items-start gap-4 mb-6">
           <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0" style="background:linear-gradient(135deg,rgba(240,180,41,0.2),rgba(251,191,36,0.1));border:1px solid rgba(240,180,41,0.2)">🏥</div>
-          <div>
-            <div class="flex flex-wrap gap-2 mb-2">
-              <span class="project-tag" style="color:#F0B429;border-color:rgba(240,180,41,0.3);background:rgba(240,180,41,0.08)">Power BI</span>
-              <span class="project-tag" style="color:#F0B429;border-color:rgba(240,180,41,0.3);background:rgba(240,180,41,0.08)">DAX</span>
-              <span class="project-tag" style="color:#F0B429;border-color:rgba(240,180,41,0.3);background:rgba(240,180,41,0.08)">Data Modelling</span>
-            </div>
-            <h3 class="font-display text-2xl font-bold text-white">Hospital Procurement Dashboard</h3>
+          <div><div class="flex flex-wrap gap-2 mb-2">
+            <span class="project-tag" style="color:#F0B429;border-color:rgba(240,180,41,0.3);background:rgba(240,180,41,0.08)">Power BI</span>
+            <span class="project-tag" style="color:#F0B429;border-color:rgba(240,180,41,0.3);background:rgba(240,180,41,0.08)">DAX</span>
+            <span class="project-tag" style="color:#F0B429;border-color:rgba(240,180,41,0.3);background:rgba(240,180,41,0.08)">Data Modelling</span>
           </div>
+          <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-bold text-white">Hospital Procurement Dashboard</h3></div>
         </div>
-
-        <p class="text-slate-400 text-sm leading-relaxed mb-6">
-          Designed and delivered a comprehensive Power BI dashboard for a hospital procurement team to track and analyse over $21M in annual spend. The solution replaced hours of manual Excel reporting with real-time, interactive insights.
-        </p>
-
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">Comprehensive Power BI dashboard for a hospital procurement team tracking $21M+ in annual spend — replacing manual Excel reporting with real-time interactive insights.</p>
         <div class="space-y-3 mb-6">
-          <div class="flex items-start gap-3 text-sm">
-            <span style="color:#F0B429" class="mt-0.5 flex-shrink-0">▸</span>
-            <span class="text-slate-300">Tracked <strong class="text-white">$21M+ in procurement spend</strong> across departments and suppliers</span>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <span style="color:#F0B429" class="mt-0.5 flex-shrink-0">▸</span>
-            <span class="text-slate-300">Built advanced <strong class="text-white">DAX measures</strong> including YTD, rolling averages, and variance analysis</span>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <span style="color:#F0B429" class="mt-0.5 flex-shrink-0">▸</span>
-            <span class="text-slate-300">Enabled <strong class="text-white">real-time cost insights</strong> for procurement leadership decision-making</span>
-          </div>
+          <div class="flex items-start gap-3 text-sm"><span style="color:#F0B429" class="mt-0.5 flex-shrink-0">▸</span><span class="text-slate-300">Tracked <strong class="text-white">$21M+ in procurement spend</strong> across departments and suppliers</span></div>
+          <div class="flex items-start gap-3 text-sm"><span style="color:#F0B429" class="mt-0.5 flex-shrink-0">▸</span><span class="text-slate-300">Advanced <strong class="text-white">DAX measures</strong>: YTD, rolling averages, variance analysis</span></div>
+          <div class="flex items-start gap-3 text-sm"><span style="color:#F0B429" class="mt-0.5 flex-shrink-0">▸</span><span class="text-slate-300">Enabled <strong class="text-white">real-time cost insights</strong> for procurement leadership</span></div>
         </div>
-
         <div class="flex flex-wrap gap-3">
           <span class="result-badge" style="color:#F0B429;border-color:rgba(240,180,41,0.25);background:rgba(240,180,41,0.06)">💰 $21M+ Tracked</span>
-          <span class="result-badge" style="color:#F0B429;border-color:rgba(240,180,41,0.25);background:rgba(240,180,41,0.06)">⚡ Real-Time Insights</span>
+          <span class="result-badge" style="color:#F0B429;border-color:rgba(240,180,41,0.25);background:rgba(240,180,41,0.06)">⚡ Real-Time</span>
           <span class="result-badge" style="color:#F0B429;border-color:rgba(240,180,41,0.25);background:rgba(240,180,41,0.06)">📐 Advanced DAX</span>
         </div>
       </div>
 
-      <!-- Project 4: COVID-19 Radiography Detection -->
-      <div class="glass-card p-8 fade-up group" style="transition-delay:0.16s">
+      <!-- COVID -->
+      <div class="glass-card p-8 fade-up group" style="transition-delay:.16s">
         <div class="flex items-start gap-4 mb-6">
           <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0" style="background:linear-gradient(135deg,rgba(239,68,68,0.2),rgba(220,38,38,0.1));border:1px solid rgba(239,68,68,0.2)">🫁</div>
-          <div>
-            <div class="flex flex-wrap gap-2 mb-2">
-              <span class="project-tag" style="color:#F87171;border-color:rgba(239,68,68,0.3);background:rgba(239,68,68,0.08)">TensorFlow</span>
-              <span class="project-tag" style="color:#F87171;border-color:rgba(239,68,68,0.3);background:rgba(239,68,68,0.08)">CNN</span>
-              <span class="project-tag" style="color:#F87171;border-color:rgba(239,68,68,0.3);background:rgba(239,68,68,0.08)">Transfer Learning</span>
-            </div>
-            <h3 class="font-display text-2xl font-bold text-white">COVID-19 Radiography Detection</h3>
+          <div><div class="flex flex-wrap gap-2 mb-2">
+            <span class="project-tag" style="color:#F87171;border-color:rgba(239,68,68,0.3);background:rgba(239,68,68,0.08)">TensorFlow</span>
+            <span class="project-tag" style="color:#F87171;border-color:rgba(239,68,68,0.3);background:rgba(239,68,68,0.08)">CNN</span>
+            <span class="project-tag" style="color:#F87171;border-color:rgba(239,68,68,0.3);background:rgba(239,68,68,0.08)">Transfer Learning</span>
           </div>
+          <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-bold text-white">COVID-19 Radiography Detection</h3></div>
         </div>
-
-        <p class="text-slate-400 text-sm leading-relaxed mb-6">
-          Developed a deep learning computer vision model to classify chest X-ray images for COVID-19 detection. Leveraged Transfer Learning with pre-trained CNN architectures to maximise accuracy on limited medical data.
-        </p>
-
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">Deep learning CV model to classify chest X-rays for COVID-19 detection. Transfer Learning with pre-trained CNN architectures for maximum accuracy on limited medical data.</p>
         <div class="space-y-3 mb-6">
-          <div class="flex items-start gap-3 text-sm">
-            <span style="color:#F87171" class="mt-0.5 flex-shrink-0">▸</span>
-            <span class="text-slate-300">Built with <strong class="text-white">TensorFlow/Keras</strong> using state-of-the-art Transfer Learning architectures</span>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <span style="color:#F87171" class="mt-0.5 flex-shrink-0">▸</span>
-            <span class="text-slate-300">Applied <strong class="text-white">data augmentation</strong> and fine-tuning for robust performance on medical imaging</span>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <span style="color:#F87171" class="mt-0.5 flex-shrink-0">▸</span>
-            <span class="text-slate-300">Multi-class classification: <strong class="text-white">COVID vs. Normal vs. Viral Pneumonia</strong></span>
-          </div>
+          <div class="flex items-start gap-3 text-sm"><span style="color:#F87171" class="mt-0.5 flex-shrink-0">▸</span><span class="text-slate-300">Built with <strong class="text-white">TensorFlow/Keras</strong> and Transfer Learning</span></div>
+          <div class="flex items-start gap-3 text-sm"><span style="color:#F87171" class="mt-0.5 flex-shrink-0">▸</span><span class="text-slate-300"><strong class="text-white">Data augmentation</strong> and fine-tuning for robust medical imaging</span></div>
+          <div class="flex items-start gap-3 text-sm"><span style="color:#F87171" class="mt-0.5 flex-shrink-0">▸</span><span class="text-slate-300">Multi-class: <strong class="text-white">COVID vs. Normal vs. Viral Pneumonia</strong></span></div>
         </div>
-
         <div class="flex flex-wrap gap-3">
           <span class="result-badge" style="color:#F87171;border-color:rgba(239,68,68,0.25);background:rgba(239,68,68,0.06)">🧬 Deep Learning</span>
           <span class="result-badge" style="color:#F87171;border-color:rgba(239,68,68,0.25);background:rgba(239,68,68,0.06)">🩻 X-Ray Classification</span>
-          <span class="result-badge" style="color:#F87171;border-color:rgba(239,68,68,0.25);background:rgba(239,68,68,0.06)">🔬 Transfer Learning</span>
         </div>
       </div>
 
-      <!-- Project 5: Venice Boat Classification -->
-      <div class="glass-card p-8 fade-up group" style="transition-delay:0.24s">
+      <!-- Venice -->
+      <div class="glass-card p-8 fade-up group" style="transition-delay:.24s">
         <div class="flex items-start gap-4 mb-6">
           <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0" style="background:linear-gradient(135deg,rgba(99,102,241,0.2),rgba(79,70,229,0.1));border:1px solid rgba(99,102,241,0.2)">⛵</div>
-          <div>
-            <div class="flex flex-wrap gap-2 mb-2">
-              <span class="project-tag" style="color:#818CF8;border-color:rgba(99,102,241,0.3);background:rgba(99,102,241,0.08)">Computer Vision</span>
-              <span class="project-tag" style="color:#818CF8;border-color:rgba(99,102,241,0.3);background:rgba(99,102,241,0.08)">CNN</span>
-              <span class="project-tag" style="color:#818CF8;border-color:rgba(99,102,241,0.3);background:rgba(99,102,241,0.08)">Multi-Class</span>
-            </div>
-            <h3 class="font-display text-2xl font-bold text-white">Venice Boat Classification</h3>
+          <div><div class="flex flex-wrap gap-2 mb-2">
+            <span class="project-tag" style="color:#818CF8;border-color:rgba(99,102,241,0.3);background:rgba(99,102,241,0.08)">Computer Vision</span>
+            <span class="project-tag" style="color:#818CF8;border-color:rgba(99,102,241,0.3);background:rgba(99,102,241,0.08)">CNN</span>
+            <span class="project-tag" style="color:#818CF8;border-color:rgba(99,102,241,0.3);background:rgba(99,102,241,0.08)">Multi-Class</span>
           </div>
+          <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-bold text-white">Venice Boat Classification</h3></div>
         </div>
-
-        <p class="text-slate-400 text-sm leading-relaxed mb-6">
-          Built a multi-class Computer Vision model to classify different types of boats captured in Venice waterways. Designed and trained a custom CNN architecture optimised for fine-grained visual distinctions between vessel categories.
-        </p>
-
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">Multi-class Computer Vision model classifying boat types in Venice waterways. Custom CNN architecture optimised for fine-grained visual distinctions between vessel categories.</p>
         <div class="space-y-3 mb-6">
-          <div class="flex items-start gap-3 text-sm">
-            <span style="color:#818CF8" class="mt-0.5 flex-shrink-0">▸</span>
-            <span class="text-slate-300">Custom <strong class="text-white">CNN architecture</strong> designed for fine-grained image classification</span>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <span style="color:#818CF8" class="mt-0.5 flex-shrink-0">▸</span>
-            <span class="text-slate-300">Multi-class classification of <strong class="text-white">multiple distinct boat categories</strong> in real-world conditions</span>
-          </div>
-          <div class="flex items-start gap-3 text-sm">
-            <span style="color:#818CF8" class="mt-0.5 flex-shrink-0">▸</span>
-            <span class="text-slate-300">Applied <strong class="text-white">image preprocessing, batch normalisation</strong>, and regularisation techniques</span>
-          </div>
+          <div class="flex items-start gap-3 text-sm"><span style="color:#818CF8" class="mt-0.5 flex-shrink-0">▸</span><span class="text-slate-300">Custom <strong class="text-white">CNN architecture</strong> for fine-grained classification</span></div>
+          <div class="flex items-start gap-3 text-sm"><span style="color:#818CF8" class="mt-0.5 flex-shrink-0">▸</span><span class="text-slate-300"><strong class="text-white">Batch normalisation</strong> and regularisation throughout</span></div>
         </div>
-
         <div class="flex flex-wrap gap-3">
           <span class="result-badge" style="color:#818CF8;border-color:rgba(99,102,241,0.25);background:rgba(99,102,241,0.06)">🖼️ Image Recognition</span>
           <span class="result-badge" style="color:#818CF8;border-color:rgba(99,102,241,0.25);background:rgba(99,102,241,0.06)">🏛️ Multi-Class CNN</span>
-          <span class="result-badge" style="color:#818CF8;border-color:rgba(99,102,241,0.25);background:rgba(99,102,241,0.06)">🎯 Fine-Grained CV</span>
         </div>
       </div>
 
-    </div><!-- /projects grid -->
+    </div>
   </div>
 </section>
+<div class="brand-divider"></div>
 
-<div class="teal-divider"></div>
 
-
-<!-- ═══════════════════════════════════════
-     ABOUT ME
-═══════════════════════════════════════ -->
-<section id="about" class="py-24 px-6" style="background:linear-gradient(180deg,rgba(8,15,26,0),rgba(13,30,50,0.4),rgba(8,15,26,0))">
+<!-- ═══════ ABOUT — BUG FIXED ═══════ -->
+<section id="about" class="py-24 px-6" style="background:linear-gradient(180deg,rgba(4,9,26,0),rgba(7,18,40,0.5),rgba(4,9,26,0))">
   <div class="max-w-7xl mx-auto">
     <div class="grid lg:grid-cols-2 gap-16 items-center">
 
       <!-- Left: Bio -->
       <div class="fade-up">
         <div class="section-label mb-3">Who I Am</div>
-        <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-6">
-          The Analyst <br/><span class="gradient-text">Behind the Data</span>
-        </h2>
-
-        <p class="text-slate-300 text-base leading-relaxed mb-5">
-          I'm the founder of <strong class="text-white">Hasbal Global Solutions</strong> — a data analytics educator and consultant with a track record of delivering measurable results across industries. My work spans predictive modelling, business intelligence dashboards, and deep learning systems.
-        </p>
-        <p class="text-slate-400 text-base leading-relaxed mb-5">
-          I've built models with near-perfect accuracy, delivered dashboards tracking tens of millions in spend, and trained hundreds of professionals across Nigeria, the UK, and beyond — helping them confidently use data to drive decisions.
-        </p>
-        <p class="text-slate-400 text-base leading-relaxed mb-8">
-          My teaching philosophy is simple: <strong class="text-white">no fluff, just results</strong>. Every session, course, and project I deliver is designed to be immediately applicable to real-world work.
-        </p>
-
-        <!-- Skills -->
+        <h2 style="font-family:'Cormorant Garamond',serif" class="text-4xl md:text-5xl font-bold text-white mb-6">The Analyst <br/><span class="gradient-text">Behind the Data</span></h2>
+        <p class="text-slate-300 text-base leading-relaxed mb-5">I'm the founder of <strong class="text-white">Hasbal Global Solutions</strong> — a data analytics educator and consultant with a track record of delivering measurable results across industries. My work spans predictive modelling, BI dashboards, and deep learning systems.</p>
+        <p class="text-slate-400 text-base leading-relaxed mb-5">I've built models with near-perfect accuracy, delivered dashboards tracking tens of millions in spend, and trained hundreds of professionals across Nigeria, the UK, and beyond.</p>
+        <p class="text-slate-400 text-base leading-relaxed mb-8">My teaching philosophy: <strong class="text-white">no fluff, just results</strong>. Every session and project is designed to be immediately applicable to real-world work.</p>
         <div class="space-y-4 mb-8">
-          <div>
-            <div class="flex justify-between text-sm text-slate-400 mb-1"><span>Python & Machine Learning</span><span class="text-teal-400">Advanced</span></div>
-            <div class="h-1 bg-slate-800 rounded-full"><div class="skill-bar-fill" style="width:92%"></div></div>
-          </div>
-          <div>
-            <div class="flex justify-between text-sm text-slate-400 mb-1"><span>Power BI & DAX</span><span class="text-teal-400">Expert</span></div>
-            <div class="h-1 bg-slate-800 rounded-full"><div class="skill-bar-fill" style="width:97%"></div></div>
-          </div>
-          <div>
-            <div class="flex justify-between text-sm text-slate-400 mb-1"><span>Microsoft Excel</span><span class="text-teal-400">Expert</span></div>
-            <div class="h-1 bg-slate-800 rounded-full"><div class="skill-bar-fill" style="width:98%"></div></div>
-          </div>
-          <div>
-            <div class="flex justify-between text-sm text-slate-400 mb-1"><span>SQL & Databases</span><span class="text-teal-400">Advanced</span></div>
-            <div class="h-1 bg-slate-800 rounded-full"><div class="skill-bar-fill" style="width:88%"></div></div>
-          </div>
-          <div>
-            <div class="flex justify-between text-sm text-slate-400 mb-1"><span>Deep Learning / Computer Vision</span><span class="text-teal-400">Proficient</span></div>
-            <div class="h-1 bg-slate-800 rounded-full"><div class="skill-bar-fill" style="width:82%"></div></div>
-          </div>
+          <div><div class="flex justify-between text-sm text-slate-400 mb-1"><span>Python &amp; Machine Learning</span><span style="color:#60A5FA">Advanced</span></div><div class="h-1 bg-slate-800 rounded-full"><div class="skill-bar-fill" style="width:92%"></div></div></div>
+          <div><div class="flex justify-between text-sm text-slate-400 mb-1"><span>Power BI &amp; DAX</span><span style="color:#34D399">Expert</span></div><div class="h-1 bg-slate-800 rounded-full"><div class="skill-bar-fill" style="width:97%"></div></div></div>
+          <div><div class="flex justify-between text-sm text-slate-400 mb-1"><span>Microsoft Excel</span><span style="color:#34D399">Expert</span></div><div class="h-1 bg-slate-800 rounded-full"><div class="skill-bar-fill" style="width:98%"></div></div></div>
+          <div><div class="flex justify-between text-sm text-slate-400 mb-1"><span>SQL &amp; Databases</span><span style="color:#60A5FA">Advanced</span></div><div class="h-1 bg-slate-800 rounded-full"><div class="skill-bar-fill" style="width:88%"></div></div></div>
+          <div><div class="flex justify-between text-sm text-slate-400 mb-1"><span>Deep Learning / Computer Vision</span><span style="color:#60A5FA">Proficient</span></div><div class="h-1 bg-slate-800 rounded-full"><div class="skill-bar-fill" style="width:82%"></div></div></div>
         </div>
-
         <div class="flex flex-wrap gap-4">
-          <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener"
-             class="btn-primary px-7 py-3.5 text-sm">📅 Work With Me</a>
+          <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener" class="btn-primary px-7 py-3.5 text-sm">📅 Work With Me</a>
           <a href="#courses" class="btn-outline px-7 py-3.5 text-sm">🎓 My Courses</a>
         </div>
       </div>
 
-      <!-- Right: Credentials & Highlights -->
-      <div class="fade-up flex flex-col gap-5" style="transition-delay:0.1s">
+      <!-- ════ RIGHT COLUMN — FULLY FIXED ════ -->
+      <div class="fade-up flex flex-col gap-5" style="transition-delay:.1s">
+
+        <!-- Profile Photo Card -->
+        <div class="glass-card p-6 flex items-center gap-5">
+          <!-- ✅ Change photo.png to your actual filename if different -->
+          <img src="./photo.png"
+               alt="Azeez Ajibola Azeez"
+               class="w-24 h-24 rounded-2xl object-cover flex-shrink-0"
+               style="border:2px solid rgba(59,130,246,0.35);box-shadow:0 8px 32px rgba(37,99,235,0.2)"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <!-- Fallback if photo fails -->
+          <div class="w-24 h-24 rounded-2xl flex-shrink-0 items-center justify-center font-bold text-3xl"
+               style="display:none;min-width:6rem;background:linear-gradient(135deg,#2563EB,#059669);color:#fff">A</div>
+          <div>
+            <h3 class="text-white font-bold text-xl mb-1" style="font-family:'Cormorant Garamond',serif">Azeez Ajibola Azeez</h3>
+            <p class="text-sm font-medium mb-2" style="color:#60A5FA">Founder · Hasbal Global Solutions</p>
+            <p class="text-slate-400 text-xs leading-relaxed">Data Analyst &amp; ML Engineer · Power BI · Python · SQL · Excel</p>
+          </div>
+        </div>
 
         <!-- Credential Cards -->
         <div class="grid grid-cols-2 gap-4">
-          <div class="glass-card p-5 text-center">
-            <div class="text-3xl mb-2">🎓</div>
-            <div class="text-white font-semibold text-sm">Data Science</div>
-            <div class="text-slate-400 text-xs mt-1">Certified Professional</div>
-          </div>
-          <div class="glass-card p-5 text-center">
-            <div class="text-3xl mb-2">🌍</div>
-            <div class="text-white font-semibold text-sm">Global Reach</div>
-            <div class="text-slate-400 text-xs mt-1">Nigeria · UK · Int'l</div>
-          </div>
-          <div class="glass-card p-5 text-center">
-            <div class="text-3xl mb-2">💼</div>
-            <div class="text-white font-semibold text-sm">200+ Students</div>
-            <div class="text-slate-400 text-xs mt-1">Trained &amp; Mentored</div>
-          </div>
-          <div class="glass-card p-5 text-center">
-            <div class="text-3xl mb-2">⭐</div>
-            <div class="text-white font-semibold text-sm">5-Star Rated</div>
-            <div class="text-slate-400 text-xs mt-1">Consistently</div>
-          </div>
+          <div class="glass-card p-5 text-center"><div class="text-3xl mb-2">🎓</div><div class="text-white font-semibold text-sm">Data Science</div><div class="text-slate-400 text-xs mt-1">Certified Professional</div></div>
+          <div class="glass-card p-5 text-center"><div class="text-3xl mb-2">🌍</div><div class="text-white font-semibold text-sm">Global Reach</div><div class="text-slate-400 text-xs mt-1">Nigeria · UK · Int'l</div></div>
+          <div class="glass-card p-5 text-center"><div class="text-3xl mb-2">💼</div><div class="text-white font-semibold text-sm">200+ Students</div><div class="text-slate-400 text-xs mt-1">Trained &amp; Mentored</div></div>
+          <div class="glass-card p-5 text-center"><div class="text-3xl mb-2">⭐</div><div class="text-white font-semibold text-sm">5-Star Rated</div><div class="text-slate-400 text-xs mt-1">Consistently</div></div>
         </div>
 
-        <!-- Tools Used -->
+        <!-- Tech Stack -->
         <div class="glass-card p-6">
           <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Tools &amp; Tech Stack</h4>
           <div class="flex flex-wrap gap-2">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">Power BI</span>
-            <span class="project-tag">Microsoft Excel</span>
-            <span class="project-tag">SQL</span>
-            <span class="project-tag">Google Sheets</span>
-            <span class="project-tag">TensorFlow</span>
-            <span class="project-tag">Scikit-Learn</span>
-            <span class="project-tag">Streamlit</span>
-            <span class="project-tag">Pandas</span>
-            <span class="project-tag">Matplotlib</span>
-            <span class="project-tag">SHAP</span>
-            <span class="project-tag">DAX</span>
+            <span class="project-tag">Python</span><span class="project-tag">Power BI</span><span class="project-tag">Excel</span>
+            <span class="project-tag">SQL</span><span class="project-tag">Google Sheets</span><span class="project-tag">TensorFlow</span>
+            <span class="project-tag">Scikit-Learn</span><span class="project-tag">Streamlit</span>
+            <span class="project-tag">Pandas</span><span class="project-tag">SHAP</span><span class="project-tag">DAX</span>
           </div>
         </div>
 
-        <!-- Mission Statement -->
-        <div class="rounded-2xl p-6" style="background:linear-gradient(135deg,rgba(45,212,191,0.08),rgba(13,148,136,0.05));border:1px solid rgba(45,212,191,0.15)">
-          <div class="text-teal-400 text-3xl mb-3">"</div>
-          <p class="text-slate-300 italic text-base leading-relaxed">My mission is to make data skills accessible to everyone — turning confusion into confidence, and spreadsheets into strategic assets.</p>
-          <div class="mt-4 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center text-lg" style="background:linear-gradient(135deg,#2DD4BF,#0D9488)"><img src="./photo.png" alt="none" class="w-10 h-10 rounded-full object-cover"
-                 style="border:2px solid rgba(45,212,191,0.4)"
+        <!-- ✅ Quote Card — FULLY FIXED STRUCTURE -->
+        <div class="rounded-2xl p-6" style="background:linear-gradient(135deg,rgba(37,99,235,0.08),rgba(5,150,105,0.06));border:1px solid rgba(59,130,246,0.15)">
+          <div class="text-3xl mb-3" style="color:#60A5FA">"</div>
+          <p class="text-slate-300 italic text-base leading-relaxed mb-4">My mission is to make data skills accessible to everyone — turning confusion into confidence, and spreadsheets into strategic assets.</p>
+          <!-- Photo and name sit side by side — flat siblings, no nesting issues -->
+          <div class="flex items-center gap-3">
+            <img src="./photo.png"
+                 alt="Azeez Ajibola Azeez"
+                 class="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                 style="border:2px solid rgba(59,130,246,0.38)"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="w-10 h-10 rounded-full flex-shrink-0 items-center justify-center font-bold text-sm"
+                 style="display:none;min-width:2.5rem;background:linear-gradient(135deg,#2563EB,#059669);color:#fff">A</div>
             <div>
               <div class="text-white font-semibold text-sm">Azeez Ajibola Azeez</div>
               <div class="text-slate-400 text-xs">Founder &amp; Lead Analyst</div>
             </div>
           </div>
         </div>
-      </div>
 
+      </div><!-- /right column -->
     </div>
   </div>
 </section>
+<div class="brand-divider"></div>
 
-<div class="teal-divider"></div>
 
-
-<!-- ═══════════════════════════════════════
-     TESTIMONIALS
-═══════════════════════════════════════ -->
+<!-- ═══════ TESTIMONIALS ═══════ -->
 <section id="testimonials" class="py-24 px-6">
   <div class="max-w-7xl mx-auto">
-
     <div class="text-center mb-16 fade-up">
       <div class="section-label mb-3">Client Stories</div>
-      <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-4">
-        What My <span class="gradient-text">Students Say</span>
-      </h2>
+      <h2 style="font-family:'Cormorant Garamond',serif" class="text-4xl md:text-5xl font-bold text-white mb-4">What My <span class="gradient-text">Students Say</span></h2>
       <p class="text-slate-400 text-lg max-w-xl mx-auto">Real results from real people who trusted the process.</p>
     </div>
-
     <div class="grid md:grid-cols-3 gap-6">
 
-      <!-- Testimonial 1 -->
       <div class="glass-card p-7 fade-up">
-        <div class="flex gap-1 mb-4">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
-        <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">"Before working with Hasbal, I was drowning in Excel files. After just 4 sessions I built a fully automated reporting dashboard that saves my team 5 hours every week. Worth every penny."</p>
-        <div class="flex items-center gap-3" style="border-top:1px solid rgba(45,212,191,0.1);padding-top:1rem">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#2DD4BF,#0D9488);color:#080F1A">AF</div>
-          <div>
-            <div class="text-white font-semibold text-sm">Adaeze F.</div>
-            <div class="text-slate-400 text-xs">Operations Manager · Lagos</div>
-          </div>
+        <div class="flex gap-1 mb-4"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">"Before working with Hasbal, I was drowning in Excel files. After just 4 sessions I built a fully automated dashboard that saves my team 5 hours every week. Worth every penny."</p>
+        <div class="flex items-center gap-3 pt-4" style="border-top:1px solid rgba(59,130,246,0.1)">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#2563EB,#059669);color:#fff">AF</div>
+          <div><div class="text-white font-semibold text-sm">Adaeze F.</div><div class="text-slate-400 text-xs">Operations Manager · Lagos</div></div>
         </div>
       </div>
 
-      <!-- Testimonial 2 -->
-      <div class="glass-card p-7 fade-up" style="transition-delay:0.08s">
-        <div class="flex gap-1 mb-4">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
+      <div class="glass-card p-7 fade-up" style="transition-delay:.08s">
+        <div class="flex gap-1 mb-4"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
         <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">"The Power BI Masterclass completely changed my career. I landed a BI Analyst role within 6 months of completing the course. The DAX deep dive is unlike anything I've found on YouTube."</p>
-        <div class="flex items-center gap-3" style="border-top:1px solid rgba(45,212,191,0.1);padding-top:1rem">
+        <div class="flex items-center gap-3 pt-4" style="border-top:1px solid rgba(59,130,246,0.1)">
           <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#6366F1,#4F46E5);color:white">TK</div>
-          <div>
-            <div class="text-white font-semibold text-sm">Taiwo K.</div>
-            <div class="text-slate-400 text-xs">BI Analyst · London, UK</div>
-          </div>
+          <div><div class="text-white font-semibold text-sm">Taiwo K.</div><div class="text-slate-400 text-xs">BI Analyst · London, UK</div></div>
         </div>
       </div>
 
-      <!-- Testimonial 3 -->
-      <div class="glass-card p-7 fade-up" style="transition-delay:0.16s">
-        <div class="flex gap-1 mb-4">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
-        <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">"I had a great experience learning Power BI with Azeez from Superprof. He successfully helped me achieve all the goals I needed for my project. Azeez was patient, knowledgeable, and very supportive throughout the sessions. He explained technical concepts clearly and made sure I understood the process rather than just completing the task for me. I would highly recommend him to anyone looking for practical, hands-on support with Power BI and dashboard automation."</p>
-        <div class="flex items-center gap-3" style="border-top:1px solid rgba(45,212,191,0.1);padding-top:1rem">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#F0B429,#D97706);color:#080F1A">TC</div>
-          <div>
-            <div class="text-white font-semibold text-sm">Tabassum Y. Chowdhury </div>
-            <div class="text-slate-400 text-xs"> Programme Assistant · London </div>
-          </div>
+      <div class="glass-card p-7 fade-up" style="transition-delay:.16s">
+        <div class="flex gap-1 mb-4"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">"I had a great experience learning Power BI with Azeez. He helped me achieve all my project goals — patient, knowledgeable, and ensured I understood the process rather than just completing tasks for me. Highly recommended."</p>
+        <div class="flex items-center gap-3 pt-4" style="border-top:1px solid rgba(59,130,246,0.1)">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#F0B429,#D97706);color:#04091A">TC</div>
+          <div><div class="text-white font-semibold text-sm">Tabassum Y. Chowdhury</div><div class="text-slate-400 text-xs">Programme Assistant · London</div></div>
         </div>
       </div>
 
-      <!-- Testimonial 4 -->
-      <div class="glass-card p-7 fade-up" style="transition-delay:0.08s">
-        <div class="flex gap-1 mb-4">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
-        <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">"I had zero SQL knowledge going in. 8 sessions later, I'm writing complex queries with CTEs and window functions confidently. Clear, structured, and incredibly patient as a tutor."</p>
-        <div class="flex items-center gap-3" style="border-top:1px solid rgba(45,212,191,0.1);padding-top:1rem">
+      <div class="glass-card p-7 fade-up" style="transition-delay:.08s">
+        <div class="flex gap-1 mb-4"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">"I had zero SQL knowledge going in. 8 sessions later, I'm writing complex queries with CTEs and window functions confidently. Clear, structured, and incredibly patient."</p>
+        <div class="flex items-center gap-3 pt-4" style="border-top:1px solid rgba(59,130,246,0.1)">
           <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#10B981,#059669);color:white">CI</div>
-          <div>
-            <div class="text-white font-semibold text-sm">Chidi I.</div>
-            <div class="text-slate-400 text-xs">Data Analyst Trainee · Port Harcourt</div>
-          </div>
+          <div><div class="text-white font-semibold text-sm">Chidi I.</div><div class="text-slate-400 text-xs">Data Analyst Trainee · Port Harcourt</div></div>
         </div>
       </div>
 
-      <!-- Testimonial 5 -->
-      <div class="glass-card p-7 fade-up" style="transition-delay:0.16s">
-        <div class="flex gap-1 mb-4">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
-        <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">"The 2-Hour Analyst OS is a game-changer. I now complete analyses in a fraction of the time — the templates and workflows alone are worth 10x the price. Genuinely the most practical resource I own."</p>
-        <div class="flex items-center gap-3" style="border-top:1px solid rgba(45,212,191,0.1);padding-top:1rem">
+      <div class="glass-card p-7 fade-up" style="transition-delay:.16s">
+        <div class="flex gap-1 mb-4"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">"The 2-Hour Analyst OS is a game-changer. I complete analyses in a fraction of the time — the templates alone are worth 10x the price. Genuinely the most practical resource I own."</p>
+        <div class="flex items-center gap-3 pt-4" style="border-top:1px solid rgba(59,130,246,0.1)">
           <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#8B5CF6,#7C3AED);color:white">FO</div>
-          <div>
-            <div class="text-white font-semibold text-sm">Funmi O.</div>
-            <div class="text-slate-400 text-xs">Financial Analyst · Manchester</div>
-          </div>
+          <div><div class="text-white font-semibold text-sm">Funmi O.</div><div class="text-slate-400 text-xs">Financial Analyst · Manchester</div></div>
         </div>
       </div>
 
-      <!-- Testimonial 6 -->
-      <div class="glass-card p-7 fade-up" style="transition-delay:0.24s">
-        <div class="flex gap-1 mb-4">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
-        <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">"As a small business owner with no data background, Hasbal helped me understand my numbers in a way no accountant ever could. We now make every major decision backed by a dashboard. Incredible service."</p>
-        <div class="flex items-center gap-3" style="border-top:1px solid rgba(45,212,191,0.1);padding-top:1rem">
+      <div class="glass-card p-7 fade-up" style="transition-delay:.24s">
+        <div class="flex gap-1 mb-4"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6 italic">"Hasbal helped me understand my business numbers in a way no accountant ever could. We now make every major decision backed by a dashboard. Incredible service."</p>
+        <div class="flex items-center gap-3 pt-4" style="border-top:1px solid rgba(59,130,246,0.1)">
           <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#EC4899,#DB2777);color:white">KA</div>
-          <div>
-            <div class="text-white font-semibold text-sm">Kemi A.</div>
-            <div class="text-slate-400 text-xs">Business Owner · Ibadan</div>
-          </div>
+          <div><div class="text-white font-semibold text-sm">Kemi A.</div><div class="text-slate-400 text-xs">Business Owner · Ibadan</div></div>
         </div>
       </div>
 
-    </div><!-- /testimonials grid -->
+    </div>
   </div>
 </section>
+<div class="brand-divider"></div>
 
-<div class="teal-divider"></div>
 
-
-<!-- ═══════════════════════════════════════
-     CONTACT / BOOK A SESSION
-═══════════════════════════════════════ -->
+<!-- ═══════ CONTACT ═══════ -->
 <section id="contact" class="py-24 px-6">
   <div class="max-w-5xl mx-auto">
-
     <div class="text-center mb-14 fade-up">
       <div class="section-label mb-3">Let's Work Together</div>
-      <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-4">
-        Ready to <span class="gradient-text">Get Started?</span>
-      </h2>
-      <p class="text-slate-400 text-lg max-w-xl mx-auto">Book a session, ask a question, or explore a consulting engagement. I'd love to hear from you.</p>
+      <h2 style="font-family:'Cormorant Garamond',serif" class="text-4xl md:text-5xl font-bold text-white mb-4">Ready to <span class="gradient-text">Get Started?</span></h2>
+      <p class="text-slate-400 text-lg max-w-xl mx-auto">Book a session, ask a question, or explore a consulting engagement.</p>
     </div>
-
-    <!-- Contact Grid -->
     <div class="grid md:grid-cols-2 gap-8 mb-10">
-
-      <!-- Option 1: Book Call -->
-      <div class="glass-card p-8 fade-up text-center group hover:border-teal-400" style="border-color:rgba(45,212,191,0.25)">
+      <div class="glass-card p-8 fade-up text-center" style="border-color:rgba(59,130,246,0.25)">
         <div class="text-5xl mb-5">📅</div>
-        <h3 class="font-display text-2xl font-bold text-white mb-3">Book a Session</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-6">Schedule a free 30-min discovery call or a paid tutoring session directly via Calendly — pick a time that works for you.</p>
-        <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener"
-           class="btn-primary px-8 py-4 text-base inline-block">
-          📅 Open Calendly →
-        </a>
+        <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-bold text-white mb-3">Book a Session</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">Schedule a free 30-min discovery call or paid tutoring session directly via Calendly.</p>
+        <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener" class="btn-primary px-8 py-4 text-base inline-block">📅 Open Calendly →</a>
       </div>
-
-      <!-- Option 2: WhatsApp -->
-      <div class="glass-card p-8 fade-up text-center" style="transition-delay:0.08s;border-color:rgba(37,211,102,0.15)">
+      <div class="glass-card p-8 fade-up text-center" style="transition-delay:.08s;border-color:rgba(37,211,102,0.15)">
         <div class="text-5xl mb-5">💬</div>
-        <h3 class="font-display text-2xl font-bold text-white mb-3">Chat on WhatsApp</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-6">Have a quick question before committing? Send a WhatsApp message and get a response within 24 hours.</p>
+        <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-bold text-white mb-3">Chat on WhatsApp</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">Have a quick question? Message on WhatsApp and get a response within 24 hours.</p>
         <a href="https://wa.me/2349011621931" target="_blank" rel="noopener"
-           class="inline-block px-8 py-4 text-base rounded-lg font-bold transition-all duration-200"
+           class="inline-block px-8 py-4 text-base rounded-lg font-bold"
            style="background:linear-gradient(135deg,#25D366,#128C7E);color:white;box-shadow:0 4px 20px rgba(37,211,102,0.3)">
           💬 Message on WhatsApp →
         </a>
       </div>
-
     </div>
-
-    <!-- What to Expect -->
     <div class="glass-card p-8 fade-up">
-      <h3 class="font-display text-2xl font-bold text-white mb-6 text-center">What Happens After You Book</h3>
+      <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-bold text-white mb-6 text-center">What Happens After You Book</h3>
       <div class="grid md:grid-cols-3 gap-6">
         <div class="text-center">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center font-mono font-bold text-sm mx-auto mb-3 text-navy-900" style="background:linear-gradient(135deg,#2DD4BF,#0D9488)">1</div>
+          <div class="w-10 h-10 rounded-full flex items-center justify-center font-mono font-bold text-sm mx-auto mb-3 text-white" style="background:linear-gradient(135deg,#2563EB,#059669)">1</div>
           <h4 class="text-white font-semibold mb-2">You Book</h4>
-          <p class="text-slate-400 text-sm">Select a slot on Calendly and receive instant confirmation with a Zoom link.</p>
+          <p class="text-slate-400 text-sm">Select a Calendly slot — get instant confirmation with a Zoom link.</p>
         </div>
         <div class="text-center">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center font-mono font-bold text-sm mx-auto mb-3 text-navy-900" style="background:linear-gradient(135deg,#2DD4BF,#0D9488)">2</div>
+          <div class="w-10 h-10 rounded-full flex items-center justify-center font-mono font-bold text-sm mx-auto mb-3 text-white" style="background:linear-gradient(135deg,#2563EB,#059669)">2</div>
           <h4 class="text-white font-semibold mb-2">We Connect</h4>
-          <p class="text-slate-400 text-sm">A 30-min discovery call to understand your goals, current skill level, and desired outcomes.</p>
+          <p class="text-slate-400 text-sm">30-min discovery call to understand your goals, skill level, and outcomes.</p>
         </div>
         <div class="text-center">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center font-mono font-bold text-sm mx-auto mb-3 text-navy-900" style="background:linear-gradient(135deg,#2DD4BF,#0D9488)">3</div>
+          <div class="w-10 h-10 rounded-full flex items-center justify-center font-mono font-bold text-sm mx-auto mb-3 text-white" style="background:linear-gradient(135deg,#2563EB,#059669)">3</div>
           <h4 class="text-white font-semibold mb-2">We Deliver</h4>
-          <p class="text-slate-400 text-sm">A custom learning plan or project roadmap tailored precisely to your goals — then we execute.</p>
+          <p class="text-slate-400 text-sm">A custom learning plan or project roadmap tailored to your goals — then we execute.</p>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
 
-<!-- ═══════════════════════════════════════
-     FOOTER
-═══════════════════════════════════════ -->
-<footer style="background:#050C14;border-top:1px solid rgba(45,212,191,0.08)" class="px-6 py-14">
+<!-- ═══════ FOOTER ═══════ -->
+<footer style="background:#020710;border-top:1px solid rgba(59,130,246,0.1)" class="px-6 py-14">
   <div class="max-w-7xl mx-auto">
     <div class="grid md:grid-cols-4 gap-10 mb-12">
-
-      <!-- Brand -->
       <div class="md:col-span-2">
         <a href="#hero" class="flex items-center gap-3 mb-5">
-          <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#2DD4BF,#0D9488)">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#080F1A" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#2563EB,#059669)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
-          <span class="font-display text-xl font-bold text-white">Hasbal <span class="gradient-text">Global Solutions</span></span>
+          <span style="font-family:'Cormorant Garamond',serif" class="text-xl font-bold text-white">Hasbal <span class="gradient-text">Global Solutions</span></span>
         </a>
-        <p class="text-slate-400 text-sm leading-relaxed max-w-sm mb-5">Premium data analytics tutoring & consulting for professionals, students, and businesses worldwide. Turn your data into decisions that drive growth.</p>
-        <div class="flex gap-3">
-          <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener"
-             class="btn-primary px-5 py-2.5 text-sm">📅 Book a Session</a>
-        </div>
+        <p class="text-slate-400 text-sm leading-relaxed max-w-sm mb-5">Premium data analytics tutoring &amp; consulting for professionals, students, and businesses worldwide. Turn your data into decisions.</p>
+        <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener" class="btn-primary px-5 py-2.5 text-sm inline-block">📅 Book a Session</a>
       </div>
-
-      <!-- Services -->
       <div>
         <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Services</h4>
         <ul class="space-y-2.5">
-          <li><a href="#services" class="text-slate-400 text-sm hover:text-teal-400 transition-colors">Excel Tutoring</a></li>
-          <li><a href="#services" class="text-slate-400 text-sm hover:text-teal-400 transition-colors">Power BI Consulting</a></li>
-          <li><a href="#services" class="text-slate-400 text-sm hover:text-teal-400 transition-colors">SQL Training</a></li>
-          <li><a href="#services" class="text-slate-400 text-sm hover:text-teal-400 transition-colors">Google Sheets</a></li>
-          <li><a href="#services" class="text-slate-400 text-sm hover:text-teal-400 transition-colors">Data Analysis</a></li>
-          <li><a href="#services" class="text-slate-400 text-sm hover:text-teal-400 transition-colors">Automation</a></li>
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Excel Tutoring</a></li>
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Power BI Consulting</a></li>
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">SQL Training</a></li>
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Google Sheets</a></li>
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Data Analysis</a></li>
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Automation</a></li>
         </ul>
       </div>
-
-      <!-- Courses & Links -->
       <div>
         <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Courses</h4>
         <ul class="space-y-2.5">
-          <li><a href="https://selar.com/excel-masterclass" target="_blank" class="text-slate-400 text-sm hover:text-teal-400 transition-colors">Excel Masterclass</a></li>
-          <li><a href="https://selar.com/power-bi-masterclass" target="_blank" class="text-slate-400 text-sm hover:text-teal-400 transition-colors">Power BI Masterclass</a></li>
-          <li><a href="https://selar.com/the_2-hour_analyst_os" target="_blank" class="text-slate-400 text-sm hover:text-teal-400 transition-colors">2-Hour Analyst OS</a></li>
-          <li><a href="#portfolio" class="text-slate-400 text-sm hover:text-teal-400 transition-colors">Case Studies</a></li>
-          <li><a href="#contact" class="text-slate-400 text-sm hover:text-teal-400 transition-colors">Contact</a></li>
+          <li><a href="https://selar.com/excel-masterclass" target="_blank" class="text-slate-400 text-sm hover:text-green-400 transition-colors">Excel Masterclass</a></li>
+          <li><a href="https://selar.com/power-bi-masterclass" target="_blank" class="text-slate-400 text-sm hover:text-green-400 transition-colors">Power BI Masterclass</a></li>
+          <li><a href="https://selar.com/the_2-hour_analyst_os" target="_blank" class="text-slate-400 text-sm hover:text-green-400 transition-colors">2-Hour Analyst OS</a></li>
+          <li><a href="#portfolio" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Case Studies</a></li>
+          <li><a href="#contact" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Contact</a></li>
         </ul>
       </div>
-
     </div>
-
-    <div class="teal-divider mb-6"></div>
-
+    <div class="brand-divider mb-6"></div>
     <div class="flex flex-col md:flex-row items-center justify-between gap-4">
       <p class="text-slate-500 text-sm">© 2025 Hasbal Global Solutions. All rights reserved.</p>
       <div class="flex items-center gap-6">
         <span class="text-slate-500 text-xs font-mono">Nigeria · United Kingdom · Global</span>
-        <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener"
-           class="text-teal-400 text-sm hover:text-teal-300 font-semibold transition-colors">Book Now →</a>
+        <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener" class="text-sm font-semibold transition-colors" style="color:#60A5FA">Book Now →</a>
       </div>
     </div>
   </div>
 </footer>
 
 
-<!-- ═══════════════════════════════════════
-     JAVASCRIPT
-═══════════════════════════════════════ -->
+<!-- ═══════ JAVASCRIPT ═══════ -->
 <script>
-  // ── Navbar scroll effect ──
+  // Navbar scroll
   const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 30);
-  });
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 30));
 
-  // ── Mobile menu toggle ──
-  const hamburger = document.getElementById('hamburger');
+  // Mobile menu
+  const hamburger  = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
-  const hamOpen   = document.getElementById('ham-open');
-  const hamClose  = document.getElementById('ham-close');
+  const hamOpen    = document.getElementById('ham-open');
+  const hamClose   = document.getElementById('ham-close');
   let menuOpen = false;
-
   hamburger.addEventListener('click', () => {
     menuOpen = !menuOpen;
     mobileMenu.classList.toggle('open', menuOpen);
     hamOpen.classList.toggle('hidden', menuOpen);
     hamClose.classList.toggle('hidden', !menuOpen);
   });
-
   function closeMenu() {
     menuOpen = false;
     mobileMenu.classList.remove('open');
@@ -1503,23 +979,16 @@
     hamClose.classList.add('hidden');
   }
 
-  // ── Scroll fade-in observer ──
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
+  // Scroll fade-in
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
   }, { threshold: 0.12 });
-
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-  // ── Hero typed word animation ──
-  const words = ['Decisions', 'Revenue', 'Growth', 'Insights', 'Strategy'];
+  // Typed word
+  const words = ['Decisions','Revenue','Growth','Insights','Strategy'];
   let wordIdx = 0;
   const typedEl = document.getElementById('typed-word');
-
   function cycleWord() {
     typedEl.style.opacity = '0';
     typedEl.style.transform = 'translateY(8px)';
@@ -1531,7 +1000,6 @@
       typedEl.style.transform = 'translateY(0)';
     }, 350);
   }
-
   setInterval(cycleWord, 2600);
 </script>
 
