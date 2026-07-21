@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hasbal Global Solutions | Data Analytics Tutoring & Consulting</title>
-  <meta name="description" content="Premium 1-on-1 Data Analytics tutoring and consulting in Microsoft Excel, Power BI, Google Sheets, SQL, and Data Analysis. Serving professionals, students, and businesses in Nigeria, UK, and internationally." />
-  <meta name="keywords" content="Data Analytics Tutoring, Excel Consultant Nigeria, Power BI Training, SQL Tutoring, Google Sheets, Data Analysis, Hasbal Global Solutions" />
+  <title>Hasbal Global Solutions | Excel, Power BI & AI Training Nigeria | Data Analytics Consulting</title>
+  <meta name="description" content="Hasbal Global Solutions — trusted education and business consulting helping students, professionals, and organisations master Excel, Power BI, AI tools, Power Automate, SQL, and data analytics. Practical, project-based training in Nigeria and worldwide." />
+  <meta name="keywords" content="Excel training Nigeria, Power BI training Nigeria, AI training Nigeria, Power Automate training, data analytics consulting Nigeria, business intelligence consulting, SQL training online, Google Sheets training, career coaching data analyst, corporate training Nigeria, dashboard development, workflow automation Nigeria, Excel consultant Lagos, Power BI consultant, data analyst training" />
   <meta name="author" content="Hasbal Global Solutions" />
-  <meta property="og:title" content="Hasbal Global Solutions | Data Analytics Tutoring & Consulting" />
-  <meta property="og:description" content="Turn data into decisions. Premium 1-on-1 tutoring & consulting in Excel, Power BI, SQL and more." />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="NG-LA" />
+  <meta name="geo.placename" content="Lagos, Nigeria" />
+  <link rel="canonical" href="https://hasbal-global-solutions.netlify.app/" />
+  <meta property="og:title" content="Excel, Power BI & AI Training Nigeria | Hasbal Global Solutions" />
+  <meta property="og:description" content="Practical 1-on-1 training in Excel, Power BI, AI tools, Power Automate, SQL & more. Serving students, professionals and businesses in Nigeria and worldwide." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hasbal-global-solutions.netlify.app/" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Excel, Power BI & AI Training Nigeria | Hasbal Global Solutions" />
+  <meta name="twitter:description" content="Project-based training in Excel, Power BI, AI, SQL, Power Automate and consulting for businesses in Nigeria and worldwide." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,6 +31,22 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-1H2Y1GYXE7');
+  </script>
+
+  <!-- Structured Data: LocalBusiness + EducationalOrganization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["EducationalOrganization", "LocalBusiness"],
+    "name": "Hasbal Global Solutions",
+    "description": "Trusted education and business consulting company specialising in Microsoft Excel, Power BI, AI tools, Power Automate, SQL, Google Sheets, dashboard development, workflow automation, career coaching and corporate training.",
+    "url": "https://hasbal-global-solutions.netlify.app/",
+    "telephone": "+2349011621931",
+    "address": { "@type": "PostalAddress", "addressLocality": "Lagos", "addressCountry": "NG" },
+    "areaServed": ["Nigeria", "United Kingdom", "Worldwide"],
+    "serviceType": ["Microsoft Excel Training", "Power BI Training", "AI Training", "Power Automate Training", "SQL Training", "Google Sheets Training", "Business Intelligence Consulting", "Dashboard Development", "Career Coaching", "Corporate Training"],
+    "sameAs": ["https://calendly.com/azeezconsulting/excel-powerbi-trial"]
+  }
   </script>
 
   <style>
@@ -257,6 +280,57 @@
 
     /* ── Stat Numbers ── */
     .stat-number { font-family:'Space Mono',monospace; }
+
+    /* ── Urgency Badge ── */
+    .urgency-badge {
+      display:inline-flex; align-items:center; gap:6px;
+      background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.3);
+      border-radius:100px; padding:5px 14px;
+      font-size:0.72rem; font-weight:700; color:#FCA5A5;
+      letter-spacing:0.04em; animation: urgency-pulse 2s ease-in-out infinite;
+    }
+    @keyframes urgency-pulse {
+      0%,100%{border-color:rgba(239,68,68,0.3)} 50%{border-color:rgba(239,68,68,0.7)}
+    }
+
+    /* ── Audience Split Cards ── */
+    .audience-card {
+      border-radius:16px; padding:28px;
+      transition:transform 0.3s, box-shadow 0.3s;
+    }
+    .audience-card:hover { transform:translateY(-4px); }
+    .audience-card-tutoring {
+      background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(16,185,129,0.08));
+      border:1.5px solid rgba(59,130,246,0.3);
+    }
+    .audience-card-consulting {
+      background:linear-gradient(135deg,rgba(240,180,41,0.1),rgba(239,68,68,0.06));
+      border:1.5px solid rgba(240,180,41,0.3);
+    }
+    .audience-card-tutoring:hover { box-shadow:0 20px 50px rgba(59,130,246,0.15); }
+    .audience-card-consulting:hover { box-shadow:0 20px 50px rgba(240,180,41,0.12); }
+
+    /* ── FAQ ── */
+    .faq-item { border-bottom:1px solid rgba(59,130,246,0.12); }
+    .faq-question {
+      width:100%; text-align:left; padding:20px 0;
+      display:flex; justify-content:space-between; align-items:center;
+      color:#F1F5F9; font-weight:600; font-size:0.95rem;
+      background:none; border:none; cursor:pointer;
+      transition:color 0.2s;
+    }
+    .faq-question:hover { color:#60A5FA; }
+    .faq-answer { max-height:0; overflow:hidden; transition:max-height 0.4s ease; }
+    .faq-answer.open { max-height:300px; }
+    .faq-chevron { transition:transform 0.3s; flex-shrink:0; }
+    .faq-chevron.open { transform:rotate(180deg); }
+
+    /* ── Trust Bar ── */
+    .trust-bar-item {
+      display:flex; align-items:center; gap:8px;
+      color:#64748B; font-size:0.8rem; font-weight:500; white-space:nowrap;
+    }
+    .trust-bar-item span:first-child { font-size:1.1rem; }
   </style>
 </head>
 <body class="mesh-bg">
@@ -289,8 +363,9 @@
       <a href="#testimonials" class="nav-link">Reviews</a>
       <a href="#contact"      class="nav-link">Contact</a>
     </div>
-    <div class="hidden md:flex">
-      <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener" class="btn-primary px-5 py-2.5 text-sm">📅 Book a Session</a>
+    <div class="hidden md:flex items-center gap-2">
+      <a href="https://calendly.com/azeezconsulting/excel-powerbi-trial" target="_blank" rel="noopener" class="btn-primary px-4 py-2.5 text-sm">🎓 Tutoring Trial</a>
+      <a href="https://calendly.com/azeezconsulting/ops-audit" target="_blank" rel="noopener" class="btn-outline px-4 py-2.5 text-sm">🏢 Business Audit</a>
     </div>
     <button id="hamburger" class="md:hidden text-slate-400 hover:text-blue-400 focus:outline-none" aria-label="Toggle menu">
       <svg id="ham-open"  width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -305,7 +380,10 @@
       <a href="#about"        class="nav-link py-2 text-base" onclick="closeMenu()">About</a>
       <a href="#testimonials" class="nav-link py-2 text-base" onclick="closeMenu()">Reviews</a>
       <a href="#contact"      class="nav-link py-2 text-base" onclick="closeMenu()">Contact</a>
-      <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" class="btn-primary px-5 py-3 text-center text-sm mt-2" onclick="closeMenu()">📅 Book a Free Session</a>
+      <div class="flex flex-col gap-2 mt-2">
+        <a href="https://calendly.com/azeezconsulting/excel-powerbi-trial" target="_blank" class="btn-primary px-5 py-3 text-center text-sm" onclick="closeMenu()">🎓 Book Free Tutoring Trial</a>
+        <a href="https://calendly.com/azeezconsulting/ops-audit" target="_blank" class="btn-outline px-5 py-3 text-center text-sm" onclick="closeMenu()">🏢 Book Business Audit</a>
+      </div>
     </div>
   </div>
 </nav>
@@ -321,31 +399,53 @@
 
       <!-- Left -->
       <div>
-        <div class="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full" style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.22)">
-          <span class="w-2 h-2 rounded-full animate-pulse" style="background:#10B981"></span>
-          <span class="section-label" style="font-size:0.7rem">Available for 1-on-1 Sessions · Nigeria · UK · Global</span>
+        <!-- Urgency + availability badges -->
+        <div class="flex flex-wrap gap-3 mb-5">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full" style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.22)">
+            <span class="w-2 h-2 rounded-full animate-pulse" style="background:#10B981"></span>
+            <span class="section-label" style="font-size:0.68rem">Nigeria · UK · Global — Remote &amp; In-Person</span>
+          </div>
+          <span class="urgency-badge">🔥 Limited Slots This Month</span>
         </div>
-        <h1 style="font-family:'Cormorant Garamond',serif" class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-6">
-          Turn Your <br/><span class="gradient-text">Raw Data</span><br/>
-          Into <span id="typed-word" class="gradient-text">Decisions</span><span class="cursor-blink"></span>
+
+        <h1 style="font-family:'Cormorant Garamond',serif" class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-5">
+          The Skills That<br/>
+          <span class="gradient-text">Get You Hired.</span><br/>
+          The Systems That<br/>
+          <span id="typed-word" class="gradient-text">Grow Your Business.</span><span class="cursor-blink"></span>
         </h1>
-        <p class="text-slate-300 text-lg md:text-xl leading-relaxed mb-8 max-w-lg font-light">
-          Premium 1-on-1 tutoring &amp; consulting in <strong class="text-white font-semibold">Excel, Power BI, Google Sheets, SQL,</strong> and Data Analysis — for professionals, students, and businesses ready to compete with data.
+
+        <p class="text-slate-300 text-lg leading-relaxed mb-5 max-w-lg">
+          Still stuck in slow spreadsheets? Can't land that data job? Your business running on guesswork? <strong class="text-white">We fix that.</strong>
         </p>
-        <div class="flex flex-wrap gap-4 mb-12">
-          <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener" class="btn-primary px-7 py-4 text-base flex items-center gap-2">📅 Book a Free Discovery Call</a>
-          <a href="#courses" class="btn-outline px-7 py-4 text-base flex items-center gap-2">🎓 Explore Courses</a>
+        <p class="text-slate-400 text-base leading-relaxed mb-8 max-w-lg">
+          Practical, project-based training &amp; consulting in <strong class="text-white">Excel, Power BI, AI Tools, Power Automate, SQL, Google Sheets,</strong> and Business Intelligence — for individuals and organisations in Nigeria and worldwide.
+        </p>
+
+        <!-- Dual CTA — tutoring vs consulting -->
+        <div class="flex flex-col sm:flex-row gap-4 mb-4">
+          <a href="https://calendly.com/azeezconsulting/excel-powerbi-trial" target="_blank" rel="noopener"
+             class="btn-primary px-7 py-4 text-base flex items-center justify-center gap-2">
+            🎓 Book Free Tutoring Trial
+          </a>
+          <a href="https://calendly.com/azeezconsulting/ops-audit" target="_blank" rel="noopener"
+             class="btn-outline px-7 py-4 text-base flex items-center justify-center gap-2">
+            🏢 Book a Business Audit
+          </a>
         </div>
-        <div class="flex flex-wrap gap-8">
-          <div><div class="stat-number text-3xl font-bold text-white">200<span class="gradient-text">+</span></div><div class="text-xs text-slate-400 mt-0.5">Students Trained</div></div>
+        <p class="text-slate-500 text-xs mb-10">✓ Free first session &nbsp;·&nbsp; ✓ No commitment &nbsp;·&nbsp; ✓ Instant Calendly booking</p>
+
+        <!-- Stats -->
+        <div class="flex flex-wrap gap-6">
+          <div><div class="stat-number text-2xl font-bold text-white">200<span class="gradient-text">+</span></div><div class="text-xs text-slate-400 mt-0.5">Students Trained</div></div>
           <div class="w-px bg-slate-700"></div>
-          <div><div class="stat-number text-3xl font-bold text-white">99.8<span class="gradient-text">%</span></div><div class="text-xs text-slate-400 mt-0.5">Model Accuracy</div></div>
+          <div><div class="stat-number text-2xl font-bold text-white">$21<span class="gradient-text">M+</span></div><div class="text-xs text-slate-400 mt-0.5">Spend Tracked</div></div>
           <div class="w-px bg-slate-700"></div>
-          <div><div class="stat-number text-3xl font-bold text-white">$21<span class="gradient-text">M+</span></div><div class="text-xs text-slate-400 mt-0.5">Spend Tracked</div></div>
+          <div><div class="stat-number text-2xl font-bold text-white">4<span class="gradient-text">+</span></div><div class="text-xs text-slate-400 mt-0.5">Countries</div></div>
           <div class="w-px bg-slate-700"></div>
-          <div><div class="stat-number text-3xl font-bold text-white">4<span class="gradient-text">+</span></div><div class="text-xs text-slate-400 mt-0.5">Countries Served</div></div>
+          <div><div class="stat-number text-2xl font-bold text-white">5<span class="gradient-text">★</span></div><div class="text-xs text-slate-400 mt-0.5">Rated on Superprof</div></div>
           <div class="w-px bg-slate-700"></div>
-          <div><div class="stat-number text-3xl font-bold text-white">100<span class="gradient-text">+</span></div><div class="text-xs text-slate-400 mt-0.5">Projects Monitored</div></div>
+          <div><div class="stat-number text-2xl font-bold text-white">10<span class="gradient-text">+</span></div><div class="text-xs text-slate-400 mt-0.5">Services Offered</div></div>
         </div>
       </div>
 
@@ -415,58 +515,195 @@
 <div class="brand-divider"></div>
 
 
+<!-- ═══════ WHO IS THIS FOR — AUDIENCE SPLIT ═══════ -->
+<section class="py-16 px-6" style="background:rgba(7,16,32,0.6)">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-10 fade-up">
+      <div class="section-label mb-2">Who We Help</div>
+      <h2 style="font-family:'Cormorant Garamond',serif" class="text-3xl md:text-4xl font-bold text-white">Are You a <span class="gradient-text">Student or Professional</span> — or a <span style="background:linear-gradient(135deg,#F0B429,#FB923C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Business?</span></h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Tutoring Path -->
+      <div class="audience-card audience-card-tutoring fade-up">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl" style="background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.3)">🎓</div>
+          <div>
+            <div class="text-xs font-mono text-blue-400 tracking-widest uppercase mb-0.5">For Students &amp; Professionals</div>
+            <h3 class="text-white font-bold text-xl" style="font-family:'Cormorant Garamond',serif">1-on-1 Training &amp; Tutoring</h3>
+          </div>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5">You want to <strong class="text-white">learn Excel, Power BI, AI tools, SQL, or Google Sheets</strong> — whether to land a job, get promoted, or pass an exam. We give you live, practical sessions tailored to your pace and goals.</p>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#60A5FA">✓</span> Beginner to advanced — all levels welcome</li>
+          <li class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#60A5FA">✓</span> Real datasets, real projects, real skills</li>
+          <li class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#60A5FA">✓</span> Career coaching &amp; CV/portfolio support</li>
+          <li class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#60A5FA">✓</span> Flexible scheduling — mornings, evenings, weekends</li>
+        </ul>
+        <a href="https://calendly.com/azeezconsulting/excel-powerbi-trial" target="_blank" rel="noopener"
+           class="btn-primary w-full py-3.5 text-sm text-center block">🎓 Book My Free Tutoring Trial →</a>
+      </div>
+
+      <!-- Consulting Path -->
+      <div class="audience-card audience-card-consulting fade-up" style="transition-delay:.08s">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl" style="background:rgba(240,180,41,0.15);border:1px solid rgba(240,180,41,0.3)">🏢</div>
+          <div>
+            <div class="text-xs font-mono tracking-widest uppercase mb-0.5" style="color:#F0B429">For Businesses &amp; Organisations</div>
+            <h3 class="text-white font-bold text-xl" style="font-family:'Cormorant Garamond',serif">Business Consulting &amp; Automation</h3>
+          </div>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5">Your team wastes hours on manual reports. You have no dashboard. You can't see what's happening in your business. We <strong class="text-white">build the systems, automate the workflows, and train your staff</strong> — fast.</p>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#F0B429">✓</span> Power BI dashboards &amp; business intelligence</li>
+          <li class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#F0B429">✓</span> AI &amp; Power Automate workflow integration</li>
+          <li class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#F0B429">✓</span> Corporate training for your entire team</li>
+          <li class="flex items-center gap-2 text-sm text-slate-300"><span style="color:#F0B429">✓</span> Operations audit — identify &amp; fix inefficiencies</li>
+        </ul>
+        <a href="https://calendly.com/azeezconsulting/ops-audit" target="_blank" rel="noopener"
+           class="w-full py-3.5 text-sm text-center block rounded-lg font-bold"
+           style="background:linear-gradient(135deg,#D97706,#B45309);color:white;box-shadow:0 4px 20px rgba(240,180,41,0.25)">
+          🏢 Book a Free Business Audit →
+        </a>
+      </div>
+    </div>
+
+    <!-- Trust strip -->
+    <div class="mt-10 fade-up flex flex-wrap justify-center gap-x-8 gap-y-3 py-5 rounded-2xl" style="background:rgba(7,16,32,0.5);border:1px solid rgba(59,130,246,0.1)">
+      <div class="trust-bar-item"><span>🇳🇬</span><span>Based in Lagos, Nigeria</span></div>
+      <div class="trust-bar-item"><span>🌍</span><span>Remote sessions worldwide</span></div>
+      <div class="trust-bar-item"><span>⭐</span><span>5-Star rated on Superprof UK</span></div>
+      <div class="trust-bar-item"><span>🎓</span><span>200+ students trained</span></div>
+      <div class="trust-bar-item"><span>💼</span><span>Enterprise clients across 4 countries</span></div>
+      <div class="trust-bar-item"><span>🤖</span><span>Now offering AI &amp; Power Automate training</span></div>
+    </div>
+  </div>
+</section>
+<div class="brand-divider"></div>
+
+
 <!-- ═══════ SERVICES ═══════ -->
 <section id="services" class="py-24 px-6">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-16 fade-up">
-      <div class="section-label mb-3">What I Offer</div>
-      <h2 style="font-family:'Cormorant Garamond',serif" class="text-4xl md:text-5xl font-bold text-white mb-4">Services &amp; <span class="gradient-text">Expertise</span></h2>
-      <p class="text-slate-400 text-lg max-w-2xl mx-auto">From raw spreadsheets to enterprise dashboards — I help you master the tools that matter and deliver results that speak for themselves.</p>
+      <div class="section-label mb-3">10 Services — One Provider</div>
+      <h2 style="font-family:'Cormorant Garamond',serif" class="text-4xl md:text-5xl font-bold text-white mb-4">Everything You Need to <span class="gradient-text">Master Data &amp; AI</span></h2>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto">From learning Excel for the first time to deploying AI workflows in your business — we cover every step of the journey, practically and affordably.</p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Excel -->
       <div class="glass-card p-7 fade-up">
         <div class="service-icon mb-5">📊</div>
-        <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">Microsoft Excel</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-4">From VLOOKUP to Power Query, VBA automation to dynamic dashboards. Learn Excel the way professionals use it.</p>
+        <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">Microsoft Excel Training</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">Nigeria's most in-demand skill — from basic formulas to Power Query, VBA macros, and dynamic dashboards. Learn the way employers actually use Excel.</p>
         <div class="flex flex-wrap gap-2"><span class="project-tag">Pivot Tables</span><span class="project-tag">Power Query</span><span class="project-tag">VBA / Macros</span><span class="project-tag">Dashboards</span></div>
       </div>
+
+      <!-- Power BI -->
       <div class="glass-card p-7 fade-up" style="transition-delay:.05s">
         <div class="service-icon mb-5">⚡</div>
-        <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">Power BI</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-4">Build interactive, boardroom-ready dashboards with advanced DAX, data models, and real-time insights decision-makers love.</p>
+        <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">Power BI Training</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">Build interactive dashboards that impress boardrooms and win job offers. Master DAX, data modelling, and Power Query from scratch or intermediate level.</p>
         <div class="flex flex-wrap gap-2"><span class="project-tag">DAX</span><span class="project-tag">Data Modelling</span><span class="project-tag">Reports</span><span class="project-tag">Visualisations</span></div>
       </div>
-      <div class="glass-card p-7 fade-up" style="transition-delay:.10s">
+
+      <!-- AI Training — NEW -->
+      <div class="glass-card p-7 fade-up" style="transition-delay:.10s;border-color:rgba(139,92,246,0.3)">
+        <div class="service-icon mb-5" style="background:rgba(139,92,246,0.12);border-color:rgba(139,92,246,0.25)">🤖</div>
+        <div class="flex items-center gap-2 mb-2">
+          <h3 class="text-white font-semibold text-xl" style="font-family:'Cormorant Garamond',serif">AI Training &amp; Integration</h3>
+          <span class="ribbon" style="position:relative;top:0;right:0;border-radius:4px;font-size:0.6rem;padding:2px 8px">HOT</span>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">Learn to use AI tools (ChatGPT, Copilot, Gemini) to work 10× faster. Integrate AI into your Excel, Power BI, and business workflows for automation and insight.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="project-tag" style="color:#A78BFA;background:rgba(139,92,246,0.1);border-color:rgba(139,92,246,0.25)">ChatGPT</span>
+          <span class="project-tag" style="color:#A78BFA;background:rgba(139,92,246,0.1);border-color:rgba(139,92,246,0.25)">Copilot</span>
+          <span class="project-tag" style="color:#A78BFA;background:rgba(139,92,246,0.1);border-color:rgba(139,92,246,0.25)">AI Workflow</span>
+          <span class="project-tag" style="color:#A78BFA;background:rgba(139,92,246,0.1);border-color:rgba(139,92,246,0.25)">Prompt Engineering</span>
+        </div>
+      </div>
+
+      <!-- Power Automate — NEW -->
+      <div class="glass-card p-7 fade-up" style="transition-delay:.15s;border-color:rgba(16,185,129,0.25)">
+        <div class="service-icon mb-5" style="background:rgba(16,185,129,0.1);border-color:rgba(16,185,129,0.22)">⚙️</div>
+        <div class="flex items-center gap-2 mb-2">
+          <h3 class="text-white font-semibold text-xl" style="font-family:'Cormorant Garamond',serif">Power Automate</h3>
+          <span class="ribbon" style="position:relative;top:0;right:0;border-radius:4px;font-size:0.6rem;padding:2px 8px;background:linear-gradient(135deg,#10B981,#059669)">NEW</span>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">Stop doing manually what a machine can do for you. Automate approvals, notifications, data collection, and reporting pipelines using Microsoft Power Automate.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="project-tag" style="color:#34D399;background:rgba(16,185,129,0.08);border-color:rgba(16,185,129,0.22)">Flows</span>
+          <span class="project-tag" style="color:#34D399;background:rgba(16,185,129,0.08);border-color:rgba(16,185,129,0.22)">Approvals</span>
+          <span class="project-tag" style="color:#34D399;background:rgba(16,185,129,0.08);border-color:rgba(16,185,129,0.22)">Notifications</span>
+          <span class="project-tag" style="color:#34D399;background:rgba(16,185,129,0.08);border-color:rgba(16,185,129,0.22)">SharePoint</span>
+        </div>
+      </div>
+
+      <!-- Google Sheets -->
+      <div class="glass-card p-7 fade-up" style="transition-delay:.20s">
         <div class="service-icon mb-5">🔄</div>
         <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">Google Sheets</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-4">Automate workflows, build collaborative trackers, and leverage Google Apps Script for full Sheets power.</p>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">Master Google Sheets for collaborative analytics — from Apps Script automation to Looker Studio reporting and live dashboards your team can use together.</p>
         <div class="flex flex-wrap gap-2"><span class="project-tag">Apps Script</span><span class="project-tag">Automation</span><span class="project-tag">Looker Studio</span><span class="project-tag">Collaboration</span></div>
       </div>
-      <div class="glass-card p-7 fade-up" style="transition-delay:.15s">
+
+      <!-- SQL -->
+      <div class="glass-card p-7 fade-up" style="transition-delay:.25s">
         <div class="service-icon mb-5">🗄️</div>
         <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">SQL &amp; Databases</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-4">From beginner SELECT statements to advanced joins, CTEs, and window functions for deep analysis.</p>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">SQL is required for almost every data analyst job. We take you from zero to confident — SELECT, JOINs, CTEs, window functions, and real database projects.</p>
         <div class="flex flex-wrap gap-2"><span class="project-tag">PostgreSQL</span><span class="project-tag">MySQL</span><span class="project-tag">CTEs</span><span class="project-tag">Window Functions</span></div>
       </div>
-      <div class="glass-card p-7 fade-up" style="transition-delay:.20s">
-        <div class="service-icon mb-5">🧠</div>
-        <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">Data Analysis &amp; ML</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-4">Python-powered analysis, statistical modelling, and machine learning — from exploratory to production-ready models.</p>
-        <div class="flex flex-wrap gap-2"><span class="project-tag">Python</span><span class="project-tag">Pandas</span><span class="project-tag">Scikit-Learn</span><span class="project-tag">Streamlit</span></div>
+
+      <!-- Dashboard Development -->
+      <div class="glass-card p-7 fade-up" style="transition-delay:.10s">
+        <div class="service-icon mb-5">📈</div>
+        <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">Dashboard Development</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">We build the dashboards for you. Custom Power BI, Excel, or Google Sheets dashboards designed to show the numbers that matter — delivered in days, not months.</p>
+        <div class="flex flex-wrap gap-2"><span class="project-tag">Power BI</span><span class="project-tag">Excel</span><span class="project-tag">BI Consulting</span><span class="project-tag">Custom Reports</span></div>
       </div>
-      <div class="glass-card p-7 fade-up" style="transition-delay:.25s">
-        <div class="service-icon mb-5">🚀</div>
-        <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">Automation &amp; Consulting</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-4">End-to-end data consulting: process automation, reporting pipelines, and bespoke dashboards that save hours weekly.</p>
-        <div class="flex flex-wrap gap-2"><span class="project-tag">Process Automation</span><span class="project-tag">Reporting</span><span class="project-tag">Bespoke Dashboards</span></div>
+
+      <!-- Career Coaching — NEW -->
+      <div class="glass-card p-7 fade-up" style="transition-delay:.15s;border-color:rgba(251,146,60,0.25)">
+        <div class="service-icon mb-5" style="background:rgba(251,146,60,0.1);border-color:rgba(251,146,60,0.22)">🎯</div>
+        <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">Career Coaching &amp; Mentoring</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">Trying to break into data analytics? Get personalised mentoring — CV review, portfolio building, interview prep, and a clear roadmap to your first (or next) data role.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="project-tag" style="color:#FB923C;background:rgba(251,146,60,0.08);border-color:rgba(251,146,60,0.22)">CV Review</span>
+          <span class="project-tag" style="color:#FB923C;background:rgba(251,146,60,0.08);border-color:rgba(251,146,60,0.22)">Portfolio Building</span>
+          <span class="project-tag" style="color:#FB923C;background:rgba(251,146,60,0.08);border-color:rgba(251,146,60,0.22)">Interview Prep</span>
+          <span class="project-tag" style="color:#FB923C;background:rgba(251,146,60,0.08);border-color:rgba(251,146,60,0.22)">Job Roadmap</span>
+        </div>
       </div>
+
+      <!-- Corporate Training — NEW -->
+      <div class="glass-card p-7 fade-up" style="transition-delay:.20s;border-color:rgba(240,180,41,0.25)">
+        <div class="service-icon mb-5" style="background:rgba(240,180,41,0.1);border-color:rgba(240,180,41,0.22)">🏢</div>
+        <h3 class="text-white font-semibold text-xl mb-2" style="font-family:'Cormorant Garamond',serif">Corporate Training</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">Train your entire team at once. We design and deliver customised group training in Excel, Power BI, AI tools, and data skills — onsite in Lagos or remote for distributed teams.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="project-tag" style="color:#F0B429;background:rgba(240,180,41,0.08);border-color:rgba(240,180,41,0.22)">Group Training</span>
+          <span class="project-tag" style="color:#F0B429;background:rgba(240,180,41,0.08);border-color:rgba(240,180,41,0.22)">Custom Curriculum</span>
+          <span class="project-tag" style="color:#F0B429;background:rgba(240,180,41,0.08);border-color:rgba(240,180,41,0.22)">Onsite &amp; Remote</span>
+          <span class="project-tag" style="color:#F0B429;background:rgba(240,180,41,0.08);border-color:rgba(240,180,41,0.22)">Certification</span>
+        </div>
+      </div>
+
     </div>
-    <div class="mt-14 fade-up rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 cta-banner">
-      <div>
-        <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-semibold text-white mb-1">Not sure where to start?</h3>
-        <p class="text-slate-400">Book a free 30-minute discovery call and I'll map the fastest path to your goals.</p>
+
+    <!-- Dual CTA Banner -->
+    <div class="mt-14 fade-up rounded-2xl p-8 md:p-10 cta-banner">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-semibold text-white mb-1">Not sure where to start?</h3>
+          <p class="text-slate-400 text-sm">Book a free call — for tutoring or business consulting. No commitment required.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+          <a href="https://calendly.com/azeezconsulting/excel-powerbi-trial" target="_blank" rel="noopener" class="btn-primary px-6 py-3.5 text-sm text-center">🎓 Book Tutoring Trial</a>
+          <a href="https://calendly.com/azeezconsulting/ops-audit" target="_blank" rel="noopener" class="btn-outline px-6 py-3.5 text-sm text-center">🏢 Book Business Audit</a>
+        </div>
       </div>
-      <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener" class="btn-primary px-8 py-4 text-sm whitespace-nowrap flex-shrink-0">📅 Book Discovery Call →</a>
     </div>
   </div>
 </section>
@@ -886,8 +1123,8 @@
           <div><div class="flex justify-between text-sm text-slate-400 mb-1"><span>Deep Learning / Computer Vision</span><span style="color:#60A5FA">Proficient</span></div><div class="h-1 bg-slate-800 rounded-full"><div class="skill-bar-fill" style="width:82%"></div></div></div>
         </div>
         <div class="flex flex-wrap gap-4">
-          <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener" class="btn-primary px-7 py-3.5 text-sm">📅 Work With Me</a>
-          <a href="#courses" class="btn-outline px-7 py-3.5 text-sm">🎓 My Courses</a>
+          <a href="https://calendly.com/azeezconsulting/excel-powerbi-trial" target="_blank" rel="noopener" class="btn-primary px-7 py-3.5 text-sm">🎓 Book Tutoring Trial</a>
+          <a href="https://calendly.com/azeezconsulting/ops-audit" target="_blank" rel="noopener" class="btn-outline px-7 py-3.5 text-sm">🏢 Business Audit</a>
         </div>
       </div>
 
@@ -1030,52 +1267,182 @@
 
 <!-- ═══════ CONTACT ═══════ -->
 <section id="contact" class="py-24 px-6">
-  <div class="max-w-5xl mx-auto">
+  <div class="max-w-6xl mx-auto">
     <div class="text-center mb-14 fade-up">
-      <div class="section-label mb-3">Let's Work Together</div>
-      <h2 style="font-family:'Cormorant Garamond',serif" class="text-4xl md:text-5xl font-bold text-white mb-4">Ready to <span class="gradient-text">Get Started?</span></h2>
-      <p class="text-slate-400 text-lg max-w-xl mx-auto">Book a session, ask a question, or explore a consulting engagement.</p>
+      <div class="section-label mb-3">Book Your Free Session</div>
+      <h2 style="font-family:'Cormorant Garamond',serif" class="text-4xl md:text-5xl font-bold text-white mb-4">Ready to <span class="gradient-text">Get Started Today?</span></h2>
+      <p class="text-slate-400 text-lg max-w-xl mx-auto">Choose your path below — all first sessions are free. No commitment, no pressure.</p>
+      <div class="urgency-badge mx-auto mt-4 w-fit">🔥 Slots filling up fast — book now to secure your spot</div>
     </div>
-    <div class="grid md:grid-cols-2 gap-8 mb-10">
-      <div class="glass-card p-8 fade-up text-center" style="border-color:rgba(59,130,246,0.25)">
-        <div class="text-5xl mb-5">📅</div>
-        <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-bold text-white mb-3">Book a Session</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-6">Schedule a free 30-min discovery call or paid tutoring session directly via Calendly.</p>
-        <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener" class="btn-primary px-8 py-4 text-base inline-block">📅 Open Calendly →</a>
+
+    <!-- 3 booking cards -->
+    <div class="grid md:grid-cols-3 gap-6 mb-10">
+
+      <!-- Tutoring -->
+      <div class="glass-card p-8 fade-up flex flex-col" style="border-color:rgba(59,130,246,0.3)">
+        <div class="text-4xl mb-4">🎓</div>
+        <div class="section-label mb-2">For Students &amp; Professionals</div>
+        <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-bold text-white mb-3">Book a Free Tutoring Trial</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5 flex-1">Learn Excel, Power BI, AI, Power Automate, SQL or Google Sheets in a live 1-on-1 session. Your first trial is completely free.</p>
+        <ul class="space-y-1.5 mb-6">
+          <li class="flex items-center gap-2 text-xs text-slate-300"><span style="color:#60A5FA">✓</span> Free first session</li>
+          <li class="flex items-center gap-2 text-xs text-slate-300"><span style="color:#60A5FA">✓</span> Learn at your pace</li>
+          <li class="flex items-center gap-2 text-xs text-slate-300"><span style="color:#60A5FA">✓</span> Zoom — Nigeria or worldwide</li>
+        </ul>
+        <a href="https://calendly.com/azeezconsulting/excel-powerbi-trial" target="_blank" rel="noopener"
+           class="btn-primary w-full py-4 text-sm text-center block font-bold">🎓 Book Tutoring Trial →</a>
+        <p class="text-slate-500 text-xs text-center mt-2">Excel · Power BI · AI · SQL · Google Sheets</p>
       </div>
-      <div class="glass-card p-8 fade-up text-center" style="transition-delay:.08s;border-color:rgba(37,211,102,0.15)">
-        <div class="text-5xl mb-5">💬</div>
+
+      <!-- Consulting -->
+      <div class="glass-card p-8 fade-up flex flex-col" style="transition-delay:.08s;border-color:rgba(240,180,41,0.35)">
+        <div class="text-4xl mb-4">🏢</div>
+        <div class="section-label mb-2" style="color:#F0B429">For Businesses &amp; Organisations</div>
+        <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-bold text-white mb-3">Book a Free Business Audit</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5 flex-1">We review your current data, reporting, and business processes — then show you exactly where you're losing time and money, and how to fix it.</p>
+        <ul class="space-y-1.5 mb-6">
+          <li class="flex items-center gap-2 text-xs text-slate-300"><span style="color:#F0B429">✓</span> Free 30-min operations audit</li>
+          <li class="flex items-center gap-2 text-xs text-slate-300"><span style="color:#F0B429">✓</span> Dashboard &amp; automation scoping</li>
+          <li class="flex items-center gap-2 text-xs text-slate-300"><span style="color:#F0B429">✓</span> Corporate training quotation</li>
+        </ul>
+        <a href="https://calendly.com/azeezconsulting/ops-audit" target="_blank" rel="noopener"
+           class="w-full py-4 text-sm text-center block rounded-lg font-bold"
+           style="background:linear-gradient(135deg,#D97706,#B45309);color:white;box-shadow:0 4px 20px rgba(240,180,41,0.25)">
+          🏢 Book Business Audit →
+        </a>
+        <p class="text-slate-500 text-xs text-center mt-2">Dashboards · Automation · Corporate Training</p>
+      </div>
+
+      <!-- WhatsApp -->
+      <div class="glass-card p-8 fade-up flex flex-col" style="transition-delay:.16s;border-color:rgba(37,211,102,0.2)">
+        <div class="text-4xl mb-4">💬</div>
+        <div class="section-label mb-2" style="color:#34D399">Quick Question?</div>
         <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-bold text-white mb-3">Chat on WhatsApp</h3>
-        <p class="text-slate-400 text-sm leading-relaxed mb-6">Have a quick question? Message on WhatsApp and get a response within 24 hours.</p>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5 flex-1">Not ready to book yet? Send a WhatsApp message — we typically respond within a few hours. Ask anything about our services, pricing, or availability.</p>
+        <ul class="space-y-1.5 mb-6">
+          <li class="flex items-center gap-2 text-xs text-slate-300"><span style="color:#34D399">✓</span> Response within hours</li>
+          <li class="flex items-center gap-2 text-xs text-slate-300"><span style="color:#34D399">✓</span> Ask about pricing &amp; packages</li>
+          <li class="flex items-center gap-2 text-xs text-slate-300"><span style="color:#34D399">✓</span> Check availability</li>
+        </ul>
         <a href="https://wa.me/2349011621931" target="_blank" rel="noopener"
-           class="inline-block px-8 py-4 text-base rounded-lg font-bold"
-           style="background:linear-gradient(135deg,#25D366,#128C7E);color:white;box-shadow:0 4px 20px rgba(37,211,102,0.3)">
+           class="w-full py-4 text-sm text-center block rounded-lg font-bold"
+           style="background:linear-gradient(135deg,#25D366,#128C7E);color:white;box-shadow:0 4px 20px rgba(37,211,102,0.25)">
           💬 Message on WhatsApp →
         </a>
+        <p class="text-slate-500 text-xs text-center mt-2">+234 901 162 1931</p>
       </div>
+
     </div>
+
+    <!-- What happens next -->
     <div class="glass-card p-8 fade-up">
       <h3 style="font-family:'Cormorant Garamond',serif" class="text-2xl font-bold text-white mb-6 text-center">What Happens After You Book</h3>
       <div class="grid md:grid-cols-3 gap-6">
         <div class="text-center">
           <div class="w-10 h-10 rounded-full flex items-center justify-center font-mono font-bold text-sm mx-auto mb-3 text-white" style="background:linear-gradient(135deg,#2563EB,#059669)">1</div>
-          <h4 class="text-white font-semibold mb-2">You Book</h4>
-          <p class="text-slate-400 text-sm">Select a Calendly slot — get instant confirmation with a Zoom link.</p>
+          <h4 class="text-white font-semibold mb-2">You Book Instantly</h4>
+          <p class="text-slate-400 text-sm">Pick your slot on Calendly — get an immediate confirmation and Zoom link. No waiting.</p>
         </div>
         <div class="text-center">
           <div class="w-10 h-10 rounded-full flex items-center justify-center font-mono font-bold text-sm mx-auto mb-3 text-white" style="background:linear-gradient(135deg,#2563EB,#059669)">2</div>
-          <h4 class="text-white font-semibold mb-2">We Connect</h4>
-          <p class="text-slate-400 text-sm">30-min discovery call to understand your goals, skill level, and outcomes.</p>
+          <h4 class="text-white font-semibold mb-2">Free Discovery Call</h4>
+          <p class="text-slate-400 text-sm">We understand your goals, current level, and timeline — then map the fastest path to results.</p>
         </div>
         <div class="text-center">
           <div class="w-10 h-10 rounded-full flex items-center justify-center font-mono font-bold text-sm mx-auto mb-3 text-white" style="background:linear-gradient(135deg,#2563EB,#059669)">3</div>
-          <h4 class="text-white font-semibold mb-2">We Deliver</h4>
-          <p class="text-slate-400 text-sm">A custom learning plan or project roadmap tailored to your goals — then we execute.</p>
+          <h4 class="text-white font-semibold mb-2">We Start Delivering</h4>
+          <p class="text-slate-400 text-sm">Personalised learning plan or project roadmap — with real progress measurable from session one.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
+<!-- ═══════ FAQ ═══════ -->
+<section class="py-20 px-6" style="background:linear-gradient(180deg,rgba(4,9,26,0),rgba(7,16,40,0.5),rgba(4,9,26,0))">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-12 fade-up">
+      <div class="section-label mb-3">Common Questions</div>
+      <h2 style="font-family:'Cormorant Garamond',serif" class="text-3xl md:text-4xl font-bold text-white mb-3">Frequently Asked <span class="gradient-text">Questions</span></h2>
+      <p class="text-slate-400">Everything you need to know before booking your first session.</p>
+    </div>
+    <div class="glass-card p-2 fade-up" itemscope itemtype="https://schema.org/FAQPage">
+
+      <div class="faq-item px-6" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span itemprop="name">Do I need any prior experience to start Excel or Power BI training?</span>
+          <svg class="faq-chevron w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer pb-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p class="text-slate-400 text-sm leading-relaxed" itemprop="text">No prior experience needed. We work with complete beginners through to intermediate and advanced users. During your free trial, we assess your current level and design the training around you — whether you're opening Excel for the first time or preparing for a senior analyst role.</p>
+        </div>
+      </div>
+
+      <div class="faq-item px-6" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span itemprop="name">How does the tutoring work — is it online or in-person?</span>
+          <svg class="faq-chevron w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer pb-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p class="text-slate-400 text-sm leading-relaxed" itemprop="text">Most sessions are conducted online via Zoom, which means we can work with students and professionals anywhere in Nigeria, the UK, and globally. For clients in Lagos, we can also arrange in-person sessions. All sessions are live and 1-on-1 — not pre-recorded videos.</p>
+        </div>
+      </div>
+
+      <div class="faq-item px-6" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span itemprop="name">What is AI training and do I need it?</span>
+          <svg class="faq-chevron w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer pb-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p class="text-slate-400 text-sm leading-relaxed" itemprop="text">AI training teaches you to use tools like ChatGPT, Microsoft Copilot, and Gemini to speed up your work dramatically — writing formulas, automating reports, summarising data, and more. If you use Excel, Power BI, or work in any data-related role, learning AI integration will make you significantly more productive and employable. It is rapidly becoming a required skill.</p>
+        </div>
+      </div>
+
+      <div class="faq-item px-6" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span itemprop="name">How is business consulting different from tutoring?</span>
+          <svg class="faq-chevron w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer pb-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p class="text-slate-400 text-sm leading-relaxed" itemprop="text">Tutoring is about teaching you a skill. Consulting is about solving your business problem. For consulting, we come in, assess your current processes, and build the solution for you — whether that's a Power BI dashboard, a Power Automate flow, or a full BI reporting system. We also offer corporate training to upskill your whole team as part of a consulting engagement.</p>
+        </div>
+      </div>
+
+      <div class="faq-item px-6" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span itemprop="name">How much does a tutoring session cost?</span>
+          <svg class="faq-chevron w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer pb-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p class="text-slate-400 text-sm leading-relaxed" itemprop="text">Your first trial session is completely free. After that, pricing depends on the subject, session frequency, and whether you want a package deal. We discuss all of this during the free trial so there are no surprises. Book your free trial first and we will provide a transparent quote tailored to your needs.</p>
+        </div>
+      </div>
+
+      <div class="faq-item px-6" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span itemprop="name">Can you train my company's team in Excel or Power BI?</span>
+          <svg class="faq-chevron w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer pb-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p class="text-slate-400 text-sm leading-relaxed" itemprop="text">Yes — corporate training is one of our core services. We design a customised curriculum for your team based on your industry, tools, and skill gaps. Training can be delivered onsite in Lagos, or remotely for teams anywhere in Nigeria or internationally. Book a free business audit and we will put together a custom proposal for your organisation.</p>
+        </div>
+      </div>
+
+      <div class="px-6 pb-0" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          <span itemprop="name">I am based outside Nigeria — can I still get training?</span>
+          <svg class="faq-chevron w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer pb-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p class="text-slate-400 text-sm leading-relaxed" itemprop="text">Absolutely. All tutoring is available online worldwide. We work with clients in the UK, Europe, North America, and across Africa. We are 5-star rated on Superprof UK. Sessions are conducted over Zoom and we accommodate time zone differences — including evenings and weekends.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<div class="brand-divider"></div>
 
 
 <!-- ═══════ FOOTER ═══════ -->
@@ -1089,18 +1456,22 @@
           </div>
           <span style="font-family:'Cormorant Garamond',serif" class="text-xl font-bold text-white">Hasbal <span class="gradient-text">Global Solutions</span></span>
         </a>
-        <p class="text-slate-400 text-sm leading-relaxed max-w-sm mb-5">Premium data analytics tutoring &amp; consulting for professionals, students, and businesses worldwide. Turn your data into decisions.</p>
-        <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener" class="btn-primary px-5 py-2.5 text-sm inline-block">📅 Book a Session</a>
+        <p class="text-slate-400 text-sm leading-relaxed max-w-sm mb-5">Trusted education and business consulting — practical training in Excel, Power BI, AI tools, Power Automate, SQL &amp; more. Serving students, professionals and organisations in Nigeria and worldwide.</p>
+        <div class="flex flex-col gap-2">
+          <a href="https://calendly.com/azeezconsulting/excel-powerbi-trial" target="_blank" rel="noopener" class="btn-primary px-5 py-2.5 text-sm inline-block text-center">🎓 Book Tutoring Trial</a>
+          <a href="https://calendly.com/azeezconsulting/ops-audit" target="_blank" rel="noopener" class="btn-outline px-5 py-2.5 text-sm inline-block text-center">🏢 Book Business Audit</a>
+        </div>
       </div>
       <div>
         <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Services</h4>
         <ul class="space-y-2.5">
-          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Excel Tutoring</a></li>
-          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Power BI Consulting</a></li>
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Excel Training</a></li>
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Power BI Training</a></li>
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">AI Training &amp; Integration</a></li>
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Power Automate</a></li>
           <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">SQL Training</a></li>
-          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Google Sheets</a></li>
-          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Data Analysis</a></li>
-          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Automation</a></li>
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Career Coaching</a></li>
+          <li><a href="#services" class="text-slate-400 text-sm hover:text-blue-400 transition-colors">Corporate Training</a></li>
         </ul>
       </div>
       <div>
@@ -1116,10 +1487,11 @@
     </div>
     <div class="brand-divider mb-6"></div>
     <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-slate-500 text-sm">© 2026 Hasbal Global Solutions. All rights reserved.</p>
+      <p class="text-slate-500 text-sm">© 2025 Hasbal Global Solutions. All rights reserved.</p>
       <div class="flex items-center gap-6">
         <span class="text-slate-500 text-xs font-mono">Nigeria · United Kingdom · Global</span>
-        <a href="https://calendly.com/azeezconsulting/fixmyops" target="_blank" rel="noopener" class="text-sm font-semibold transition-colors" style="color:#60A5FA">Book Now →</a>
+        <a href="https://calendly.com/azeezconsulting/excel-powerbi-trial" target="_blank" rel="noopener" class="text-sm font-semibold transition-colors" style="color:#60A5FA">Book Tutoring →</a>
+        <a href="https://calendly.com/azeezconsulting/ops-audit" target="_blank" rel="noopener" class="text-sm font-semibold transition-colors" style="color:#F0B429">Book Consulting →</a>
       </div>
     </div>
   </div>
@@ -1158,7 +1530,7 @@
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
   // Typed word
-  const words = ['Decisions','Revenue','Growth','Insights','Strategy'];
+  const words = ['Grow Your Business.','Land That Job.','Save 10 Hours a Week.','Master Power BI.','Automate Everything.','Get Promoted Faster.'];
   let wordIdx = 0;
   const typedEl = document.getElementById('typed-word');
   function cycleWord() {
@@ -1172,7 +1544,26 @@
       typedEl.style.transform = 'translateY(0)';
     }, 350);
   }
-  setInterval(cycleWord, 2600);
+  setInterval(cycleWord, 2800);
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const answer  = btn.nextElementSibling;
+    const chevron = btn.querySelector('.faq-chevron');
+    const isOpen  = answer.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-chevron').forEach(c => c.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(q => q.setAttribute('aria-expanded','false'));
+
+    // Open clicked if it was closed
+    if (!isOpen) {
+      answer.classList.add('open');
+      chevron.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
+  }
 </script>
 
 </body>
