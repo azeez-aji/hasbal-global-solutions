@@ -4,7 +4,7 @@
   <!-- Main page — the only indexable URL on this single-page site -->
   <url>
     <loc>https://hasbal-global-solutions.netlify.app/</loc>
-    <lastmod>2025-07-23</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
