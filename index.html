@@ -19,6 +19,22 @@
   <meta name="twitter:title" content="Excel, Power BI & AI Training Nigeria | Hasbal Global Solutions" />
   <meta name="twitter:description" content="Project-based training in Excel, Power BI, AI, SQL, Power Automate and consulting for businesses in Nigeria and worldwide." />
 
+  <!-- ═══ FAVICON — shows logo in Google search results, browser tabs & bookmarks ═══ -->
+  <!-- Upload Main_Logo.png to your GitHub repo root alongside index.html -->
+  <link rel="icon"                type="image/png" href="./Main_Logo.png" />
+  <link rel="shortcut icon"       type="image/png" href="./Main_Logo.png" />
+  <link rel="apple-touch-icon"                     href="./Main_Logo.png" />
+
+  <!-- OG image — logo appears when site is shared on WhatsApp, LinkedIn, Twitter etc. -->
+  <meta property="og:image"         content="https://hasbal-global-solutions.netlify.app/Main_Logo.png" />
+  <meta property="og:image:width"   content="930" />
+  <meta property="og:image:height"  content="930" />
+  <meta property="og:image:alt"     content="Hasbal Global Solutions Logo" />
+  <meta name="twitter:image"        content="https://hasbal-global-solutions.netlify.app/Main_Logo.png" />
+
+  <!-- Web app manifest — enables logo on Android home-screen shortcuts -->
+  <link rel="manifest" href="./site.webmanifest" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
@@ -408,12 +424,23 @@
           <span class="urgency-badge">🔥 Limited Slots This Month</span>
         </div>
 
-        <h1 style="font-family:'Cormorant Garamond',serif" class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-5">
+        <!-- Static H1 — purely fixed content, never changes height -->
+        <h1 style="font-family:'Cormorant Garamond',serif;line-height:1.25"
+            class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-0">
           The Skills That<br/>
           <span class="gradient-text">Get You Hired.</span><br/>
-          The Systems That<br/>
-          <span id="typed-word" class="gradient-text">Grow Your Business.</span><span class="cursor-blink"></span>
+          The Systems That
         </h1>
+        <!--
+          LAYOUT-SHIFT FIX: typed word lives in its own block, completely outside the H1.
+          height:2.7em = 2 lines at every breakpoint (line-height:1.25 × 2 + small buffer).
+          overflow:hidden locks the container — whether the phrase is 1 line or 2 lines,
+          the box never grows or shrinks, so nothing below ever shifts.
+        -->
+        <div class="text-5xl md:text-6xl lg:text-7xl font-bold mb-5"
+             style="font-family:'Cormorant Garamond',serif;line-height:1.25;height:2.7em;overflow:hidden">
+          <span id="typed-word" class="gradient-text">Grow Your Business.</span><span class="cursor-blink"></span>
+        </div>
 
         <p class="text-slate-300 text-lg leading-relaxed mb-5 max-w-lg">
           Still stuck in slow spreadsheets? Can't land that data job? Your business running on guesswork? <strong class="text-white">We fix that.</strong>
@@ -1487,7 +1514,7 @@
     </div>
     <div class="brand-divider mb-6"></div>
     <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-slate-500 text-sm">© 2026 Hasbal Global Solutions. All rights reserved.</p>
+      <p class="text-slate-500 text-sm">© 2025 Hasbal Global Solutions. All rights reserved.</p>
       <div class="flex items-center gap-6">
         <span class="text-slate-500 text-xs font-mono">Nigeria · United Kingdom · Global</span>
         <a href="https://calendly.com/azeezconsulting/excel-powerbi-trial" target="_blank" rel="noopener" class="text-sm font-semibold transition-colors" style="color:#60A5FA">Book Tutoring →</a>
@@ -1529,20 +1556,28 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-  // Typed word
+  // Typed word — pure crossfade, no translateY (container uses overflow:hidden)
   const words = ['Grow Your Business.','Land That Job.','Save 10 Hours a Week.','Master Power BI.','Automate Everything.','Get Promoted Faster.'];
   let wordIdx = 0;
   const typedEl = document.getElementById('typed-word');
+
+  // textContent wipes child nodes but keeps the span — safe to use here
   function cycleWord() {
+    // Step 1: fade out
+    typedEl.style.transition = 'opacity 0.35s ease';
     typedEl.style.opacity = '0';
-    typedEl.style.transform = 'translateY(8px)';
-    typedEl.style.transition = 'opacity 0.3s, transform 0.3s';
+
+    // Step 2: swap text mid-fade, then fade back in
     setTimeout(() => {
       wordIdx = (wordIdx + 1) % words.length;
       typedEl.textContent = words[wordIdx];
+      // Re-apply gradient class stripped by textContent assignment
+      typedEl.className = 'gradient-text';
+      // Force browser reflow before re-showing
+      void typedEl.offsetWidth;
+      typedEl.style.transition = 'opacity 0.45s ease';
       typedEl.style.opacity = '1';
-      typedEl.style.transform = 'translateY(0)';
-    }, 350);
+    }, 370);
   }
   setInterval(cycleWord, 2800);
 
