@@ -364,8 +364,12 @@
 <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 px-6 py-4">
   <div class="max-w-7xl mx-auto flex items-center justify-between">
     <a href="#hero" class="flex items-center gap-3">
-      <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#2563EB,#059669)">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      <!-- Company logo — white rounded container keeps logo crisp on dark navbar -->
+      <div class="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0"
+           style="background:#ffffff;padding:3px;box-shadow:0 2px 8px rgba(0,0,0,0.25)">
+        <img src="./Main_Logo.png"
+             alt="Hasbal Global Solutions"
+             class="w-full h-full object-contain" />
       </div>
       <div>
         <span class="text-white font-serif font-semibold text-lg leading-none" style="font-family:'Cormorant Garamond',serif">Hasbal</span>
@@ -1479,8 +1483,12 @@
     <div class="grid md:grid-cols-4 gap-10 mb-12">
       <div class="md:col-span-2">
         <a href="#hero" class="flex items-center gap-3 mb-5">
-          <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#2563EB,#059669)">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <!-- Company logo in footer -->
+          <div class="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0"
+               style="background:#ffffff;padding:3px;box-shadow:0 2px 8px rgba(0,0,0,0.3)">
+            <img src="./Main_Logo.png"
+                 alt="Hasbal Global Solutions"
+                 class="w-full h-full object-contain" />
           </div>
           <span style="font-family:'Cormorant Garamond',serif" class="text-xl font-bold text-white">Hasbal <span class="gradient-text">Global Solutions</span></span>
         </a>
