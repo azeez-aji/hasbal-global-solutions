@@ -1,0 +1,2 @@
+# Serve logo as favicon.ico — fixes Google Search Console 404
+/favicon.ico    /Main_Logo.png    200
