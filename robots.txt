@@ -1,0 +1,9 @@
+# Hasbal Global Solutions — robots.txt
+# https://hasbal-global-solutions.netlify.app
+
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Sitemap location — Google, Bing and others read this automatically
+Sitemap: https://hasbal-global-solutions.netlify.app/sitemap.xml
