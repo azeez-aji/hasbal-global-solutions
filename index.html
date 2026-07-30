@@ -37,9 +37,22 @@
   <!-- Web app manifest — enables logo on Android home-screen shortcuts -->
   <link rel="manifest" href="./site.webmanifest" />
 
+  <!-- ═══ RESOURCE HINTS — tell browser (and Google's crawler) about external domains early ═══ -->
+  <!-- dns-prefetch resolves DNS before the request is made — free speed win -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="https://analytics.google.com" />
+  <!-- preconnect fully establishes the connection (DNS + TCP + TLS) for most critical domains -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
+
+  <!-- Google Fonts — only the weights actually used, display=swap prevents invisible text flash -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS Play CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Google tag (gtag.js) -->
