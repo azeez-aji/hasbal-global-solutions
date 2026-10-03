@@ -1225,10 +1225,13 @@
         <!-- Profile Photo Card -->
         <div class="glass-card p-6 flex items-center gap-5">
           <!-- ✅ Change photo.png to your actual filename if different -->
+          <!-- Distortion fix: object-fit, aspect-ratio and object-position are set
+               inline (not just via Tailwind class) so the crop is guaranteed regardless
+               of the photo's actual width/height or any class-loading timing. -->
           <img src="./photo.png"
                alt="Azeez Ajibola Azeez, Founder of Hasbal Global Solutions, Lagos Nigeria"
-               class="w-24 h-24 rounded-2xl object-cover flex-shrink-0"
-               style="border:2px solid rgba(59,130,246,0.35);box-shadow:0 8px 32px rgba(37,99,235,0.2)"
+               class="rounded-2xl flex-shrink-0"
+               style="display:block;width:96px;height:96px;object-fit:cover;object-position:center top;aspect-ratio:1/1;border:2px solid rgba(59,130,246,0.35);box-shadow:0 8px 32px rgba(37,99,235,0.2)"
                width="96" height="96"
                loading="lazy"
                decoding="async"
@@ -1270,8 +1273,8 @@
           <div class="flex items-center gap-3">
             <img src="./photo.png"
                  alt="Azeez Ajibola Azeez, Hasbal Global Solutions"
-                 class="w-10 h-10 rounded-full object-cover flex-shrink-0"
-                 style="border:2px solid rgba(59,130,246,0.38)"
+                 class="rounded-full flex-shrink-0"
+                 style="display:block;width:40px;height:40px;object-fit:cover;object-position:center top;aspect-ratio:1/1;border:2px solid rgba(59,130,246,0.38)"
                  width="40" height="40"
                  loading="lazy"
                  decoding="async"
