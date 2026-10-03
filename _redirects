@@ -1,2 +1,8 @@
+# Redirect legacy Netlify subdomain to the primary production domain.
+# Must come first — rules are evaluated top to bottom, first match wins.
+# The 301! (forced) ensures every path on the old domain redirects,
+# including static files, consolidating SEO signals onto hasbal.com.ng.
+https://hasbal-global-solutions.netlify.app/*  https://hasbal.com.ng/:splat  301!
+
 # Serve logo as favicon.ico — fixes Google Search Console 404
 /favicon.ico    /Main_Logo.png    200
