@@ -21,18 +21,19 @@
   <meta name="twitter:description" content="Power BI dashboards, reporting automation, and Excel training for businesses and professionals. Nigeria and worldwide." />
 
   <!-- ═══ FAVICON — shows logo in Google search results, browser tabs & bookmarks ═══ -->
-  <!-- Upload Main_Logo.png to your GitHub repo root alongside index.html -->
+  <!-- Icon files required in repo root: Main_Logo-icon-192.png, Main_Logo-icon-512.png,
+       Main_Logo-apple-touch.png, Main_Logo-og.png, Main_Logo.webp (see image-audit report) -->
   <link rel="icon"                type="image/x-icon" href="/favicon.ico" />
-  <link rel="icon"                type="image/png"    href="/Main_Logo.png" sizes="192x192" />
+  <link rel="icon"                type="image/png"    href="/Main_Logo-icon-192.png" sizes="192x192" />
   <link rel="shortcut icon"       type="image/x-icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon"                        href="/Main_Logo.png" />
+  <link rel="apple-touch-icon"    sizes="180x180"      href="/Main_Logo-apple-touch.png" />
 
   <!-- OG image — logo appears when site is shared on WhatsApp, LinkedIn, Twitter etc. -->
-  <meta property="og:image"         content="https://hasbal.com.ng/Main_Logo.png" />
-  <meta property="og:image:width"   content="930" />
-  <meta property="og:image:height"  content="930" />
+  <meta property="og:image"         content="https://hasbal.com.ng/Main_Logo-og.png" />
+  <meta property="og:image:width"   content="600" />
+  <meta property="og:image:height"  content="600" />
   <meta property="og:image:alt"     content="Hasbal Global Solutions Logo" />
-  <meta name="twitter:image"        content="https://hasbal.com.ng/Main_Logo.png" />
+  <meta name="twitter:image"        content="https://hasbal.com.ng/Main_Logo-og.png" />
 
   <!-- Web app manifest — enables logo on Android home-screen shortcuts -->
   <link rel="manifest" href="./site.webmanifest" />
@@ -420,13 +421,17 @@
       <!-- Company logo — white rounded container keeps logo crisp on dark navbar -->
       <div class="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0"
            style="background:#ffffff;padding:3px;box-shadow:0 2px 8px rgba(0,0,0,0.25)">
-        <img src="./Main_Logo.png"
-             alt="Hasbal Global Solutions"
-             class="w-full h-full object-contain"
-             width="40" height="40"
-             loading="eager"
-             decoding="sync"
-             fetchpriority="high" />
+        <!-- Above-the-fold logo: WebP primary (11.8KB vs 103KB original), eager-loaded, not lazy -->
+        <picture>
+          <source srcset="./Main_Logo.webp" type="image/webp" />
+          <img src="./Main_Logo-icon-192.png"
+               alt="Hasbal Global Solutions"
+               class="w-full h-full object-contain"
+               width="40" height="40"
+               loading="eager"
+               decoding="sync"
+               fetchpriority="high" />
+        </picture>
       </div>
       <div>
         <span class="text-white font-serif font-semibold text-lg leading-none" style="font-family:'Cormorant Garamond',serif">Hasbal</span>
@@ -1575,12 +1580,16 @@
           <!-- Company logo in footer -->
           <div class="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0"
                style="background:#ffffff;padding:3px;box-shadow:0 2px 8px rgba(0,0,0,0.3)">
-            <img src="./Main_Logo.png"
-                 alt="Hasbal Global Solutions"
-                 class="w-full h-full object-contain"
-                 width="44" height="44"
-                 loading="lazy"
-                 decoding="async" />
+            <!-- Below-the-fold logo: WebP primary, lazy-loaded -->
+            <picture>
+              <source srcset="./Main_Logo.webp" type="image/webp" />
+              <img src="./Main_Logo-icon-192.png"
+                   alt="Hasbal Global Solutions"
+                   class="w-full h-full object-contain"
+                   width="44" height="44"
+                   loading="lazy"
+                   decoding="async" />
+            </picture>
           </div>
           <span style="font-family:'Cormorant Garamond',serif" class="text-xl font-bold text-white">Hasbal <span class="gradient-text">Global Solutions</span></span>
         </a>
