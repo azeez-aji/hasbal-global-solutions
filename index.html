@@ -1237,18 +1237,20 @@
 
         <!-- Profile Photo Card -->
         <div class="glass-card p-6 flex items-center gap-5">
-          <!-- ✅ Change photo.png to your actual filename if different -->
-          <!-- Distortion fix: object-fit, aspect-ratio and object-position are set
-               inline (not just via Tailwind class) so the crop is guaranteed regardless
-               of the photo's actual width/height or any class-loading timing. -->
-          <img src="./photo.png"
-               alt="Azeez Ajibola Azeez, Founder of Hasbal Global Solutions, Lagos Nigeria"
-               class="rounded-2xl flex-shrink-0"
-               style="display:block;width:96px;height:96px;object-fit:cover;object-position:center top;aspect-ratio:1/1;border:2px solid rgba(59,130,246,0.35);box-shadow:0 8px 32px rgba(37,99,235,0.2)"
-               width="96" height="96"
-               loading="lazy"
-               decoding="async"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <!-- Optimized: WebP primary (5.6KB) / JPEG fallback (9.9KB), replacing a 590KB PNG.
+               Distortion fix preserved: object-fit, aspect-ratio and object-position are set
+               inline so the crop is guaranteed regardless of class-loading timing. -->
+          <picture>
+            <source srcset="./photo.webp" type="image/webp" />
+            <img src="./photo.jpg"
+                 alt="Azeez Ajibola Azeez, Founder of Hasbal Global Solutions, Lagos Nigeria"
+                 class="rounded-2xl flex-shrink-0"
+                 style="display:block;width:96px;height:96px;object-fit:cover;object-position:center top;aspect-ratio:1/1;border:2px solid rgba(59,130,246,0.35);box-shadow:0 8px 32px rgba(37,99,235,0.2)"
+                 width="96" height="96"
+                 loading="lazy"
+                 decoding="async"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          </picture>
           <!-- Fallback if photo fails -->
           <div class="w-24 h-24 rounded-2xl flex-shrink-0 items-center justify-center font-bold text-3xl"
                style="display:none;min-width:6rem;background:linear-gradient(135deg,#2563EB,#059669);color:#fff">A</div>
@@ -1284,14 +1286,17 @@
           <p class="text-slate-300 italic text-base leading-relaxed mb-4">My mission is to make data skills accessible to everyone, turning confusion into confidence and spreadsheets into strategic assets.</p>
           <!-- Photo and name sit side by side — flat siblings, no nesting issues -->
           <div class="flex items-center gap-3">
-            <img src="./photo.png"
-                 alt="Azeez Ajibola Azeez, Hasbal Global Solutions"
-                 class="rounded-full flex-shrink-0"
-                 style="display:block;width:40px;height:40px;object-fit:cover;object-position:center top;aspect-ratio:1/1;border:2px solid rgba(59,130,246,0.38)"
-                 width="40" height="40"
-                 loading="lazy"
-                 decoding="async"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <picture>
+              <source srcset="./photo.webp" type="image/webp" />
+              <img src="./photo.jpg"
+                   alt="Azeez Ajibola Azeez, Hasbal Global Solutions"
+                   class="rounded-full flex-shrink-0"
+                   style="display:block;width:40px;height:40px;object-fit:cover;object-position:center top;aspect-ratio:1/1;border:2px solid rgba(59,130,246,0.38)"
+                   width="40" height="40"
+                   loading="lazy"
+                   decoding="async"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            </picture>
             <div class="w-10 h-10 rounded-full flex-shrink-0 items-center justify-center font-bold text-sm"
                  style="display:none;min-width:2.5rem;background:linear-gradient(135deg,#2563EB,#059669);color:#fff">A</div>
             <div>
